@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit 2: Client-Side Technologies &amp; XML – WebTech Learning (CS35302)</title>
+  <meta name="description" content="Complete documentation and topic-wise MCQ examination for Unit 2: Client-Side Technologies & XML. Course CS35302, Quantum University." />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/documentation.css" />
+  <link rel="stylesheet" href="css/test-system.css" />
+</head>
+<body>
+  <!-- Header / Navigation Bar -->
+  <header class="wt-navbar">
+    <div class="wt-container wt-nav-inner">
+      <div class="wt-nav-left">
+        <button class="wt-mobile-toggle" id="wt-mobile-menu-btn" aria-label="Toggle Syllabus Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <a href="index.html" class="wt-brand">
+          <div class="wt-brand-logo">WT</div>
+          <div class="wt-brand-text">
+            <span class="wt-site-title">WebTech Learning</span>
+            <span class="wt-course-sub">CS35302 • B.Tech CSE Sem 5</span>
+          </div>
+        </a>
+      </div>
+
+      <nav>
+        <ul class="wt-nav-links">
+          <li><a href="index.html" class="wt-nav-link">Home</a></li>
+          <li><a href="unit1.html" class="wt-nav-link">Unit 1</a></li>
+          <li><a href="unit2.html" class="wt-nav-link active">Unit 2</a></li>
+          <li><a href="unit3.html" class="wt-nav-link">Unit 3</a></li>
+          <li><a href="unit4.html" class="wt-nav-link">Unit 4</a></li>
+          <li><a href="unit5.html" class="wt-nav-link">Unit 5</a></li>
+        </ul>
+      </nav>
+
+      <div class="wt-nav-right">
+        <button class="wt-search-trigger" data-action="open-search" title="Search Syllabus (Press / or Ctrl+K)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <span>Search syllabus...</span>
+          <kbd class="wt-search-shortcut">/</kbd>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wt-sidebar-overlay" id="wt-sidebar-overlay"></div>
+
+  <!-- Documentation Layout Grid -->
+  <div class="wt-container wt-doc-layout">
+    <!-- Sticky Sidebar Table of Contents -->
+    <aside class="wt-sidebar" id="wt-sidebar">
+      <div class="wt-sidebar-header">
+        <div class="wt-sidebar-unit-title">Unit 2: Client-Side &amp; XML</div>
+        <div class="wt-sidebar-progress-wrap">
+          <span>Topics Complete:</span>
+          <div class="wt-sidebar-progress-bar">
+            <div class="wt-sidebar-progress-fill" id="wt-sidebar-unit2-fill" style="width: 0%;"></div>
+          </div>
+          <span id="wt-sidebar-unit2-count">0/11</span>
+        </div>
+      </div>
+
+      <nav class="wt-sidebar-nav">
+        <div class="wt-toc-group-label">Syllabus Topics (11)</div>
+        <ul class="wt-toc-list">
+          <li class="wt-toc-item"><a href="#intro-javascript" class="wt-toc-link"><span>1. Intro to JavaScript</span><span class="wt-toc-check" data-toc-key="intro-javascript">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#objects-javascript" class="wt-toc-link"><span>2. Objects in JavaScript</span><span class="wt-toc-check" data-toc-key="objects-javascript">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#dhtml-javascript" class="wt-toc-link"><span>3. DHTML with JavaScript</span><span class="wt-toc-check" data-toc-key="dhtml-javascript">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#lists-tables-images-forms-frames" class="wt-toc-link"><span>4. Lists, Tables, Forms, Frames</span><span class="wt-toc-check" data-toc-key="lists-tables-images-forms-frames">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#css" class="wt-toc-link"><span>5. Cascading Style Sheets (CSS)</span><span class="wt-toc-check" data-toc-key="css">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#dtd" class="wt-toc-link"><span>6. Document Type Definition (DTD)</span><span class="wt-toc-check" data-toc-key="dtd">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#dhtml-concepts" class="wt-toc-link"><span>7. DHTML Concepts</span><span class="wt-toc-check" data-toc-key="dhtml-concepts">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#xml-schemas" class="wt-toc-link"><span>8. XML Schemas (XSD)</span><span class="wt-toc-check" data-toc-key="xml-schemas">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#object-models-dom" class="wt-toc-link"><span>9. Object Models (DOM in XML)</span><span class="wt-toc-check" data-toc-key="object-models-dom">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#presenting-xml" class="wt-toc-link"><span>10. Presenting XML (CSS &amp; XSLT)</span><span class="wt-toc-check" data-toc-key="presenting-xml">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#xml-processors-dom-sax" class="wt-toc-link"><span>11. XML Processors: DOM &amp; SAX</span><span class="wt-toc-check" data-toc-key="xml-processors-dom-sax">✓</span></a></li>
+        </ul>
+
+        <div class="wt-sidebar-test-card">
+          <h6>Unit Practice Exam</h6>
+          <p>Test your mastery across all 11 topics of Unit 2.</p>
+          <a href="#unit2-mixed" class="wt-btn wt-btn-sm wt-btn-accent" style="width: 100%; justify-content: center;">
+            View Practice Exam
+          </a>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="wt-doc-content">
+      <!-- Unit Banner -->
+      <section class="wt-unit-overview-banner">
+        <span class="wt-unit-tag">Course CS35302 • Semester 5</span>
+        <h1 class="wt-unit-heading">Unit 2: Client-Side Technologies &amp; XML</h1>
+        <p class="wt-unit-lead">
+          Master the client-side programming foundation and structured data representation that power web applications. This unit covers JavaScript language semantics, prototypal object models, DOM manipulation and event delegation, HTML5 structured markup (lists, tables, forms, frames), modern CSS architecture, XML schema validation (DTD &amp; XSD), XML DOM traversal, XSLT document transformation, and high-performance XML parsers (DOM vs SAX).
+        </p>
+        <div class="wt-unit-meta-bar">
+          <div><strong>Syllabus Code:</strong> CS35302 Unit 2</div>
+          <div><strong>Topics:</strong> 11 Detailed Sections</div>
+          <div><strong>Topic Tests:</strong> 11 Separate Tests (20 MCQs each)</div>
+          <div><strong>Mixed Exam:</strong> 20 Questions</div>
+        </div>
+      </section>
+
+      <!-- Topic 1 -->
+      <section id="intro-javascript" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 2.1 • Syllabus Section</span>
+            <h2 class="wt-topic-title">Introduction to JavaScript</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="intro-javascript">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="2" data-test-key="intro-javascript" data-test-title="Introduction to JavaScript">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            <strong>JavaScript</strong> was created in May 1995 by <strong>Brendan Eich</strong> at Netscape Communications in just 10 days, initially under the code name <em>Mocha</em>, renamed to <em>LiveScript</em>, and finally released as <em>JavaScript</em> to capitalize on the buzz surrounding Sun Microsystems' Java. It was standardized under the <strong>ECMAScript</strong> specification (ECMA-262).
+          </p>
+
+          <h4>1. Language Characteristics &amp; Execution Paradigm</h4>
+          <ul>
+            <li><strong>Single-Threaded &amp; Non-Blocking:</strong> JavaScript has a single call stack and executes one command at a time. Concurrency is handled asynchronously via the <strong>Event Loop</strong>.</li>
+            <li><strong>Dynamically Typed:</strong> Variables hold values of any type, and types are resolved at runtime rather than compile time.</li>
+            <li><strong>First-Class Functions:</strong> Functions are treated as first-class citizens: they can be assigned to variables, passed as arguments to other functions (callbacks), and returned from functions (closures).</li>
+            <li><strong>Multi-Paradigm:</strong> Supports imperative, functional, and prototype-based object-oriented programming.</li>
+          </ul>
+
+          <h4>2. Variable Declarations: <code>var</code> vs <code>let</code> vs <code>const</code></h4>
+          <div class="wt-table-wrap">
+            <table class="wt-table">
+              <thead>
+                <tr>
+                  <th>Keyword</th>
+                  <th>Scope</th>
+                  <th>Hoisting Behavior</th>
+                  <th>Re-declaration?</th>
+                  <th>Re-assignment?</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>var</code></td>
+                  <td>Function scope</td>
+                  <td>Hoisted to top of scope and initialized with <code>undefined</code>.</td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                </tr>
+                <tr>
+                  <td><code>let</code></td>
+                  <td>Block scope <code>{ ... }</code></td>
+                  <td>Hoisted to top of block, but enters the <strong>Temporal Dead Zone (TDZ)</strong> until execution reaches declaration.</td>
+                  <td>No</td>
+                  <td>Yes</td>
+                </tr>
+                <tr>
+                  <td><code>const</code></td>
+                  <td>Block scope <code>{ ... }</code></td>
+                  <td>Hoisted into TDZ; must be initialized immediately at declaration.</td>
+                  <td>No</td>
+                  <td>No (reference is immutable, but object properties can still mutate)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>3. Closures and the Event Loop</h4>
+          <p>
+            A <strong>Closure</strong> is the combination of a function bundled together with references to its surrounding lexical environment. A closure gives an inner function access to an outer function's scope even after the outer function has returned.
+          </p>
+
+          <div class="wt-code-card">
+            <div class="wt-code-header">
+              <span>JavaScript Closure Pattern Example</span>
+              <span>JavaScript</span>
+            </div>
+            <pre><code>function createCounter(initialValue) {
+  let count = initialValue; // Private state held in closure
+
+  return {
+    increment: function() {
+      count += 1;
+      return count;
+    },
+    decrement: function() {
+      count -= 1;
+      return count;
+    },
+    getValue: function() {
+      return count;
+    }
+  };
+}
+
+const counter = createCounter(10);
+console.log(counter.increment()); // 11
+console.log(counter.getValue());   // 11
+console.log(counter.count);        // undefined (encapsulated)</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 2 -->
+      <section id="objects-javascript" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 2.2 • Syllabus Section</span>
+            <h2 class="wt-topic-title">Objects in JavaScript</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="objects-javascript">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="2" data-test-key="objects-javascript" data-test-title="Objects in JavaScript">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            Unlike classical class-based object-oriented languages (Java, C++), JavaScript is fundamentally <strong>prototype-based</strong>. Every object in JavaScript contains an internal hidden link to another object, known as its prototype (accessible via <code>Object.getPrototypeOf(obj)</code> or legacy <code>__proto__</code>).
+          </p>
+
+          <h4>1. The Prototype Chain and Inheritance</h4>
+          <p>
+            When a property or method is accessed on an object, the JavaScript engine first checks the object itself (own property). If not found, it traverses up the prototype link to the parent prototype object, repeating this search until finding the property or reaching <code>null</code> at the end of the chain (<code>Object.prototype.__proto__ === null</code>). If not found, it returns <code>undefined</code>.
+          </p>
+
+          <div class="wt-code-card">
+            <div class="wt-code-header">
+              <span>Prototypal Inheritance vs ES6 Classes</span>
+              <span>JavaScript</span>
+            </div>
+            <pre><code>// 1. Classic Constructor Function & Prototype Linking
+function Student(name, rollNo) {
+  this.name = name;
+  this.rollNo = rollNo;
+}
+
+Student.prototype.study = function() {
+  return `${this.name} (Roll: ${this.rollNo}) is studying Web Technology CS35302.`;
+};
+
+// 2. Modern ES6 Class Syntax (Syntactic Sugar over Prototypal Inheritance)
+class EngineeringStudent extends Student {
+  constructor(name, rollNo, branch) {
+    super(name, rollNo);
+    this.branch = branch;
+  }
+
+  getDetails() {
+    return `${this.study()} Branch: ${this.branch}`;
+  }
+}
+
+const s1 = new EngineeringStudent("Aryan", 1045, "CSE");
+console.log(s1.getDetails());</code></pre>
+          </div>
+
+          <h4>2. The <code>this</code> Keyword Binding Rules</h4>
+          <ol>
+            <li><strong>Default Binding:</strong> Standalone function invocation in non-strict mode binds <code>this</code> to the global object (<code>window</code> in browsers); in strict mode (<code>"use strict"</code>), <code>this</code> evaluates to <code>undefined</code>.</li>
+            <li><strong>Implicit Binding:</strong> When a function is called as a method of an object (<code>obj.method()</code>), <code>this</code> points to the object preceding the dot.</li>
+            <li><strong>Explicit Binding:</strong> Using <code>.call(thisArg, arg1, ...)</code>, <code>.apply(thisArg, [args])</code>, or <code>.bind(thisArg)</code> forcibly sets the value of <code>this</code>.</li>
+            <li><strong>New Binding:</strong> When invoked with the <code>new</code> operator, a brand new empty object is created, its prototype is linked to the constructor's <code>prototype</code>, and <code>this</code> is bound to that new instance.</li>
+            <li><strong>Arrow Functions:</strong> Arrow functions do NOT have their own <code>this</code>; they capture <code>this</code> lexically from their enclosing scope.</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Topic 3 -->
+      <section id="dhtml-javascript" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 2.3 • Syllabus Section</span>
+            <h2 class="wt-topic-title">Dynamic HTML with JavaScript</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="dhtml-javascript">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="2" data-test-key="dhtml-javascript" data-test-title="Dynamic HTML with JavaScript">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            <strong>Dynamic HTML (DHTML)</strong> represents the technique of manipulating the browser's Document Object Model (DOM) at runtime using JavaScript to create interactive, animated, responsive user interfaces without requiring complete page reloads.
+          </p>
+
+          <h4>1. Core DOM Manipulation Primitives</h4>
+          <ul>
+            <li><strong>Querying Elements:</strong> <code>document.getElementById('id')</code>, <code>document.querySelector('.class')</code>, <code>document.querySelectorAll('div > p')</code> (returns static NodeList).</li>
+            <li><strong>Creating &amp; Inserting Nodes:</strong> <code>document.createElement('div')</code>, <code>document.createTextNode('text')</code>, <code>parent.appendChild(node)</code>, <code>parent.insertBefore(newNode, refNode)</code>, <code>element.insertAdjacentHTML('beforeend', markup)</code>.</li>
+            <li><strong>Modifying Content &amp; Attributes:</strong> <code>element.textContent = 'Safe string'</code>, <code>element.setAttribute('data-id', '42')</code>, <code>element.classList.add('active')</code>, <code>element.classList.toggle('open')</code>.</li>
+          </ul>
+
+          <h4>2. Event Propagation: Capturing, Target, and Bubbling</h4>
+          <p>
+            When a user clicks an element nested deep inside the DOM, the event travels through three distinct phases:
+          </p>
+          <ol>
+            <li><strong>Capture Phase (Trickling):</strong> The event descends from <code>window</code> &rarr; <code>document</code> &rarr; <code>&lt;html&gt;</code> &rarr; <code>&lt;body&gt;</code> down to the target's parent.</li>
+            <li><strong>Target Phase:</strong> The event reaches the actual element clicked (<code>e.target</code>).</li>
+            <li><strong>Bubbling Phase:</strong> The event ascends back up the ancestor tree to <code>window</code>. (Default listener phase unless <code>capture: true</code> is passed).</li>
+          </ol>
+
+          <div class="wt-code-card">
+            <div class="wt-code-header">
+              <span>High-Performance Event Delegation Pattern</span>
+              <span>JavaScript</span>
+            </div>
+            <pre><code>// Instead of attaching 1,000 listeners to 1,000 list items:
+const syllabusList = document.getElementById('syllabus-topic-list');
+
+syllabusList.addEventListener('click', function(event) {
+  // Find closest list item clicked
+  const item = event.target.closest('li[data-topic-id]');
+  if (!item) return;
+
+  const topicId = item.getAttribute('data-topic-id');
+  console.log(`User clicked topic: ${topicId}`);
+  
+  // Toggle selection state
+  item.classList.toggle('selected');
+});</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 4 -->
+      <section id="lists-tables-images-forms-frames" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 2.4 • Syllabus Section</span>
+            <h2 class="wt-topic-title">HTML Lists, Tables, Images, Forms, Frames</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="lists-tables-images-forms-frames">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="2" data-test-key="lists-tables-images-forms-frames" data-test-title="HTML Lists, Tables, Images, Forms, Frames">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            HTML provides structured markup elements to organize tabular data, hierarchical lists, media assets, interactive forms, and nested browsing contexts.
+          </p>
+
+          <h4>1. HTML Lists</h4>
+          <ul>
+            <li><strong>Unordered List (<code>&lt;ul&gt;</code>):</strong> Bulleted collection of items (<code>&lt;li&gt;</code>).</li>
+            <li><strong>Ordered List (<code>&lt;ol&gt;</code>):</strong> Numbered sequence of items; supports attributes <code>type="1|a|A|i|I"</code>, <code>start="10"</code>, <code>reversed</code>.</li>
+            <li><strong>Description List (<code>&lt;dl&gt;</code>):</strong> Key-value pairings using description terms (<code>&lt;dt&gt;</code>) and description definitions (<code>&lt;dd&gt;</code>).</li>
+          </ul>
+
+          <h4>2. Accessible Tabular Data</h4>
+          <p>
+            Tables should never be used for page layout (use CSS Grid/Flexbox instead). Tables must structure relational data using semantic tags: <code>&lt;table&gt;</code>, <code>&lt;caption&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th scope="col|row"&gt;</code>, and <code>&lt;td&gt;</code>. Span attributes:
+          </p>
+          <ul>
+            <li><code>colspan="N"</code>: Merges cell across N consecutive columns.</li>
+            <li><code>rowspan="N"</code>: Merges cell vertically across N consecutive rows.</li>
+          </ul>
+
+          <h4>3. Responsive Images: <code>&lt;picture&gt;</code> and <code>srcset</code></h4>
+          <p>
+            Modern HTML5 provides the <code>&lt;picture&gt;</code> element to deliver the most efficient image format (e.g., AVIF, WebP) and pixel dimensions based on the client device screen density and viewport width:
+          </p>
+
+          <div class="wt-code-card">
+            <div class="wt-code-header">
+              <span>Art Direction with HTML5 &lt;picture&gt;</span>
+              <span>HTML5</span>
+            </div>
+            <pre><code>&lt;picture&gt;
+  &lt;source media="(min-width: 1024px)" srcset="banner-large.webp" type="image/webp" /&gt;
+  &lt;source media="(min-width: 640px)" srcset="banner-medium.webp" type="image/webp" /&gt;
+  &lt;img src="banner-fallback.jpg" alt="Quantum University WebTech Lab" loading="lazy" width="800" height="400" /&gt;
+&lt;/picture&gt;</code></pre>
+          </div>
+
+          <h4>4. HTML5 Forms and Constraint Validation</h4>
+          <p>
+            Forms collect user input via input controls: <code>type="text|email|password|number|date|color|file|range"</code>. HTML5 enables native client-side validation using attributes: <code>required</code>, <code>pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}"</code> (regex validation), <code>min</code>, <code>max</code>, <code>maxlength</code>. Controls are grouped using <code>&lt;fieldset&gt;</code> and labeled with <code>&lt;legend&gt;</code>.
+          </p>
+
+          <h4>5. Frames and the Modern <code>&lt;iframe&gt;</code></h4>
+          <p>
+            Legacy HTML 4 <code>&lt;frameset&gt;</code> and <code>&lt;frame&gt;</code> are obsolete and completely removed in HTML5. Modern web development exclusively utilizes <strong><code>&lt;iframe&gt;</code> (Inline Frame)</strong> to embed external content (maps, video players, payment gateways). For security against Cross-Site Scripting (XSS) and Clickjacking, always configure the <code>sandbox</code> attribute:
+          </p>
+          <div class="wt-callout wt-callout-warning">
+            <div class="wt-callout-icon">🔒</div>
+            <div class="wt-callout-body">
+              <strong>Security Hardening: The iframe Sandbox</strong>
+              Writing <code>&lt;iframe sandbox src="..."&gt;</code> imposes maximum restrictions: disables scripts, blocks form submissions, prevents same-origin access, and forbids top-level navigation. Privileges can be selectively granted using tokens like <code>sandbox="allow-scripts allow-forms allow-same-origin"</code>.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 5 -->
+      <section id="css" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 2.5 • Syllabus Section</span>
+            <h2 class="wt-topic-title">CSS (Cascading Style Sheets)</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="css">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="2" data-test-key="css" data-test-title="CSS (Cascading Style Sheets)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            <strong>Cascading Style Sheets (CSS)</strong> is the declarative style language used to describe the presentation, layout, typography, colors, and responsive adaptation of a document written in HTML or XML.
+          </p>
+
+          <h4>1. The Cascade and Specificity Formula</h4>
+          <p>
+            When multiple CSS rules conflict on the same element, the browser computes rule priority based on <strong>Importance</strong> (<code>!important</code>), <strong>Origin</strong> (User Agent &rarr; User &rarr; Author), and <strong>Specificity</strong>:
+          </p>
+          <ul>
+            <li><strong>Inline Styles (<code>style="..."</code>):</strong> Specificity value: <code>(1, 0, 0, 0)</code>.</li>
+            <li><strong>ID Selectors (<code>#header</code>):</strong> Specificity value: <code>(0, 1, 0, 0)</code>.</li>
+            <li><strong>Class, Attribute, and Pseudo-classes (<code>.btn</code>, <code>[type="text"]</code>, <code>:hover</code>):</strong> Specificity value: <code>(0, 0, 1, 0)</code>.</li>
+            <li><strong>Element &amp; Pseudo-elements (<code>h1</code>, <code>p</code>, <code>::before</code>):</strong> Specificity value: <code>(0, 0, 0, 1)</code>.</li>
+            <li>Universal selector (<code>*</code>) and combinators (<code>+</code>, <code>&gt;</code>, <code>~</code>) add zero specificity.</li>
+          </ul>
+
+          <h4>2. The CSS Box Model</h4>
+          <p>
+            Every HTML element is rendered as a rectangular box comprising four concentric layers:
+          </p>
+          <ul>
+            <li><strong>Content:</strong> The text or media rendered.</li>
+            <li><strong>Padding:</strong> Transparent spacing immediately surrounding the content.</li>
+            <li><strong>Border:</strong> Outermost boundary surrounding the padding.</li>
+            <li><strong>Margin:</strong> Spacing outside the border separating this element from siblings.</li>
+          </ul>
+          <div class="wt-callout wt-callout-tip">
+            <div class="wt-callout-icon">💡</div>
+            <div class="wt-callout-body">
+              <strong>Best Practice: Reset to Border-Box</strong>
+              By default, <code>box-sizing: content-box</code> causes <code>width</code> to apply only to content, meaning adding padding and borders makes the element wider than specified. Applying <code>* { box-sizing: border-box; }</code> forces <code>width</code> to include content, padding, and border, making responsive layouts predictable!
+            </div>
+          </div>
+
+          <h4>3. Modern Layout Systems: Flexbox vs Grid</h4>
+          <ul>
+            <li><strong>CSS Flexbox (1-Dimensional Layout):</strong> Designed for laying out items in a single direction (row or column). Key container properties: <code>display: flex</code>, <code>flex-direction</code>, <code>justify-content</code> (main axis alignment), <code>align-items</code> (cross axis alignment), <code>flex-wrap</code>.</li>
+            <li><strong>CSS Grid (2-Dimensional Layout):</strong> Designed for simultaneous control over both rows and columns. Key properties: <code>display: grid</code>, <code>grid-template-columns: repeat(3, 1fr)</code>, <code>grid-template-rows</code>, <code>gap: 1.5rem</code>, <code>grid-column: span 2</code>.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Topic 6 -->
+      <section id="dtd" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 2.6 • Syllabus Section</span>
+            <h2 class="wt-topic-title">Document Type Definition (DTD)</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="dtd">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="2" data-test-key="dtd" data-test-title="Document Type Definition (DTD)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            An XML document is considered <strong>Well-Formed</strong> if it adheres to fundamental XML syntax rules (single root element, correctly nested tags, closing tags present, quoted attributes). An XML document is <strong>Valid</strong> if it is well-formed AND conforms to the constraints of a formal schema, such as a <strong>Document Type Definition (DTD)</strong>.
+          </p>
+
+          <h4>1. Internal vs External DTD Declarations</h4>
+          <ul>
+            <li><strong>Internal DTD:</strong> Defined directly within the XML document inside the <code>&lt;!DOCTYPE root [...]&gt;</code> block.</li>
+            <li><strong>External DTD:</strong> Located in a separate <code>.dtd</code> file referenced via <code>SYSTEM</code> (private identifier/URL) or <code>PUBLIC</code> (standard identifier).</li>
+          </ul>
+
+          <h4>2. Element Type Declarations &amp; Multiplicity Operators</h4>
+          <p>
+            Syntax: <code>&lt;!ELEMENT element-name (content-model)&gt;</code>
+          </p>
+          <ul>
+            <li><code>#PCDATA</code>: Parsed Character Data (normal text checked by XML parser).</li>
+            <li><code>EMPTY</code>: Element cannot contain child elements or character data (e.g., <code>&lt;!ELEMENT br EMPTY&gt;</code>).</li>
+            <li><code>ANY</code>: Element can contain any mixture of elements and text.</li>
+            <li><code>,</code> (Comma): Mandates sequential order: <code>(name, email, phone)</code>.</li>
+            <li><code>|</code> (Pipe): Represents choice (either/or): <code>(credit_card | upi | netbanking)</code>.</li>
+            <li><code>?</code>: 0 or 1 occurrence (optional).</li>
+            <li><code>*</code>: 0 or more occurrences (optional repeated).</li>
+            <li><code>+</code>: 1 or more occurrences (mandatory at least once).</li>
+          </ul>
+
+          <div class="wt-code-card">
+            <div class="wt-code-header">
+              <span>Complete DTD &amp; Conforming XML Document</span>
+              <span>XML &amp; DTD</span>
+            </div>
+            <pre><code>&lt;!-- course.dtd --&gt;
+&lt;!ELEMENT course (code, title, instructor, student*)&gt;
+&lt;!ELEMENT code (#PCDATA)&gt;
+&lt;!ELEMENT title (#PCDATA)&gt;
+&lt;!ELEMENT instructor (#PCDATA)&gt;
+&lt;!ELEMENT student (name, rollNo)&gt;
+&lt;!ELEMENT name (#PCDATA)&gt;
+&lt;!ELEMENT rollNo (#PCDATA)&gt;
+&lt;!ATTLIST course
+  semester CDATA #REQUIRED
+  credits (3|4) "4"
+  id ID #REQUIRED&gt;
+&lt;!ATTLIST student
+  status (active|graduated) "active"&gt;
+
+&lt;!-- Conforming XML File --&gt;
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE course SYSTEM "course.dtd"&gt;
+&lt;course semester="5" credits="4" id="c35302"&gt;
+  &lt;code&gt;CS35302&lt;/code&gt;
+  &lt;title&gt;Web Technology&lt;/title&gt;
+  &lt;instructor&gt;Dr. Sharma&lt;/instructor&gt;
+  &lt;student status="active"&gt;
+    &lt;name&gt;Rahul Verma&lt;/name&gt;
+    &lt;rollNo&gt;2101034&lt;/rollNo&gt;
+  &lt;/student&gt;
+&lt;/course&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 7 -->
+      <section id="dhtml-concepts" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 2.7 • Syllabus Section</span>
+            <h2 class="wt-topic-title">Dynamic HTML (DHTML) Concepts</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="dhtml-concepts">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="2" data-test-key="dhtml-concepts" data-test-title="Dynamic HTML (DHTML) Concepts">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            <strong>DHTML</strong> is not an independent programming language or W3C standard itself; rather, it is an umbrella term describing the strategic synthesis of four foundational technologies:
+          </p>
+          <ol>
+            <li><strong>HTML:</strong> Provides document content and semantic structure.</li>
+            <li><strong>CSS:</strong> Defines visual appearance, geometric positioning, and display states.</li>
+            <li><strong>JavaScript:</strong> Acts as the client-side scripting engine to react to user inputs.</li>
+            <li><strong>DOM (Document Object Model):</strong> The standardized API exposing HTML elements as programmatic objects that scripts can inspect and alter in real time.</li>
+          </ol>
+
+          <h4>1. Historical Evolution &amp; Cross-Browser Challenges</h4>
+          <p>
+            During the 1990s browser wars between Netscape Navigator 4 and Microsoft Internet Explorer 4, each vendor introduced incompatible proprietary object models. Netscape introduced <code>document.layers</code>, while Microsoft created <code>document.all</code>. Developers were forced to write complex conditional sniffing routines:
+          </p>
+          <div class="wt-code-card">
+            <div class="wt-code-header">
+              <span>Historical Legacy DHTML Sniffing vs Modern Standard</span>
+              <span>JavaScript</span>
+            </div>
+            <pre><code>// Legacy 1990s Fragile DHTML:
+function getLayer(id) {
+  if (document.getElementById) return document.getElementById(id); // W3C Standard
+  if (document.all) return document.all[id];                       // IE 4
+  if (document.layers) return document.layers[id];                 // Netscape 4
+}
+
+// Modern W3C Standard DHTML:
+const element = document.querySelector('#interactive-panel');
+element.classList.toggle('active');</code></pre>
+          </div>
+
+          <h4>2. Classic DHTML Interactive UI Components</h4>
+          <ul>
+            <li><strong>Image Rollovers:</strong> Swapping image <code>src</code> on mouseover / mouseout.</li>
+            <li><strong>Accordion Panels:</strong> Expanding and collapsing content sections dynamically by toggling CSS height or display properties.</li>
+            <li><strong>Modal Dialogs:</strong> Overlaying an accessible focused dialog box while dimming and locking background scrolling.</li>
+            <li><strong>Drag-and-Drop Widgets:</strong> Listening to mouse/touch coordinates to dynamically update CSS <code>transform: translate(x, y)</code>.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Topic 8 -->
+      <section id="xml-schemas" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 2.8 • Syllabus Section</span>
+            <h2 class="wt-topic-title">XML Schemas (XSD)</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="xml-schemas">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="2" data-test-key="xml-schemas" data-test-title="XML Schemas (XSD)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            While DTD provided initial schema validation, it suffered severe limitations: non-XML syntax, zero support for data types (treating everything as plain text <code>#PCDATA</code>), and no support for XML Namespaces. To solve this, the W3C published <strong>XML Schema Definition (XSD)</strong> in 2001.
+          </p>
+
+          <h4>1. Why XSD is Superior to DTD</h4>
+          <ul>
+            <li><strong>Written in XML Syntax:</strong> Can be authored, parsed, transformed, and queried using standard XML tools and parsers.</li>
+            <li><strong>Rich Data Types:</strong> Supports dozens of built-in primitive types (<code>xs:string</code>, <code>xs:integer</code>, <code>xs:decimal</code>, <code>xs:boolean</code>, <code>xs:date</code>, <code>xs:anyURI</code>).</li>
+            <li><strong>User-Defined Constraints (Facets):</strong> Allows custom range bounds, lengths, and regular expression patterns (<code>&lt;xs:pattern&gt;</code>).</li>
+            <li><strong>Namespace Support:</strong> Fully integrates with XML namespaces (<code>targetNamespace</code>, <code>xmlns:xs="http://www.w3.org/2001/XMLSchema"</code>).</li>
+          </ul>
+
+          <h4>2. Simple Types vs Complex Types</h4>
+          <ul>
+            <li><strong>Simple Type (<code>&lt;xs:simpleType&gt;</code>):</strong> Contains only text content; cannot have child elements or XML attributes. Often created by restricting a built-in type with facets.</li>
+            <li><strong>Complex Type (<code>&lt;xs:complexType&gt;</code>):</strong> Can contain child elements, attributes, or mixed content.</li>
+          </ul>
+
+          <div class="wt-code-card">
+            <div class="wt-code-header">
+              <span>Production XSD Schema with Facets &amp; Compositors</span>
+              <span>XML Schema (XSD)</span>
+            </div>
+            <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://quantumuniversity.edu/webtech"
+           xmlns="http://quantumuniversity.edu/webtech"
+           elementFormDefault="qualified"&gt;
+
+  &lt;!-- Simple Type Restriction for Roll Number --&gt;
+  &lt;xs:simpleType name="RollNumberType"&gt;
+    &lt;xs:restriction base="xs:string"&gt;
+      &lt;xs:pattern value="[0-9]{7}" /&gt;
+    &lt;/xs:restriction&gt;
+  &lt;/xs:simpleType&gt;
+
+  &lt;!-- Complex Type for Student --&gt;
+  &lt;xs:element name="student"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:sequence&gt;
+        &lt;xs:element name="name" type="xs:string" /&gt;
+        &lt;xs:element name="rollNo" type="RollNumberType" /&gt;
+        &lt;xs:element name="marks" type="xs:decimal" minOccurs="0" /&gt;
+      &lt;/xs:sequence&gt;
+      &lt;xs:attribute name="semester" type="xs:positiveInteger" use="required" /&gt;
+    &lt;/xs:complexType&gt;
+  &lt;/xs:element&gt;
+
+&lt;/xs:schema&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 9 -->
+      <section id="object-models-dom" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 2.9 • Syllabus Section</span>
+            <h2 class="wt-topic-title">Object Models (DOM in XML)</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="object-models-dom">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="2" data-test-key="object-models-dom" data-test-title="Object Models (DOM in XML)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            The <strong>XML Document Object Model (XML DOM)</strong> is a W3C standard programming interface that defines a platform- and language-neutral tree structure for accessing and manipulating XML documents. In the DOM, every component of an XML document (element, attribute, text, comment) is represented as a <strong>Node</strong> object.
+          </p>
+
+          <h4>1. XML DOM Node Types (<code>nodeType</code> Constants)</h4>
+          <div class="wt-table-wrap">
+            <table class="wt-table">
+              <thead>
+                <tr>
+                  <th>Node Type Constant</th>
+                  <th>Integer Value</th>
+                  <th>Description &amp; Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>ELEMENT_NODE</code></td>
+                  <td>1</td>
+                  <td>An XML tag element (e.g., <code>&lt;student&gt;</code>).</td>
+                </tr>
+                <tr>
+                  <td><code>ATTRIBUTE_NODE</code></td>
+                  <td>2</td>
+                  <td>An attribute inside a tag (e.g., <code>id="101"</code>).</td>
+                </tr>
+                <tr>
+                  <td><code>TEXT_NODE</code></td>
+                  <td>3</td>
+                  <td>The textual content enclosed inside an element.</td>
+                </tr>
+                <tr>
+                  <td><code>CDATA_SECTION_NODE</code></td>
+                  <td>4</td>
+                  <td>Raw unparsed character data block (<code>&lt;![CDATA[...]&gt;</code>).</td>
+                </tr>
+                <tr>
+                  <td><code>COMMENT_NODE</code></td>
+                  <td>8</td>
+                  <td>An XML comment (<code>&lt;!-- comment --&gt;</code>).</td>
+                </tr>
+                <tr>
+                  <td><code>DOCUMENT_NODE</code></td>
+                  <td>9</td>
+                  <td>The root document object representing the entire XML file.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>2. Parsing and Traversal in Client-Side JavaScript</h4>
+          <div class="wt-code-card">
+            <div class="wt-code-header">
+              <span>Parsing XML Strings with DOMParser</span>
+              <span>JavaScript</span>
+            </div>
+            <pre><code>const xmlString = `&lt;courses&gt;
+  &lt;course id="CS35302"&gt;
+    &lt;title&gt;Web Technology&lt;/title&gt;
+    &lt;credits&gt;4&lt;/credits&gt;
+  &lt;/course&gt;
+&lt;/courses&gt;`;
+
+// Instantiate DOMParser
+const parser = new DOMParser();
+const xmlDoc = parser.parseFromString(xmlString, "application/xml");
+
+// Inspect elements
+const courses = xmlDoc.getElementsByTagName("course");
+for (let i = 0; i &lt; courses.length; i++) {
+  const courseId = courses[i].getAttribute("id");
+  const title = courses[i].getElementsByTagName("title")[0].textContent;
+  console.log(`Course Code: ${courseId}, Title: ${title}`);
+}</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 10 -->
+      <section id="presenting-xml" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 2.10 • Syllabus Section</span>
+            <h2 class="wt-topic-title">Presenting XML (CSS &amp; XSLT)</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="presenting-xml">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="2" data-test-key="presenting-xml" data-test-title="Presenting XML (CSS &amp; XSLT)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            Raw XML documents contain purely structured semantic data with zero presentation instructions. To display XML content to end users in a browser, two standard mechanisms exist: <strong>CSS</strong> and <strong>XSLT (Extensible Stylesheet Language Transformations)</strong>.
+          </p>
+
+          <h4>1. Method 1: Direct Styling with CSS</h4>
+          <p>
+            An XML document links to an external CSS stylesheet using a processing instruction at the top of the file: <code>&lt;?xml-stylesheet type="text/css" href="styles.css"?&gt;</code>.
+          </p>
+          <p>
+            <em>Limitations of CSS for XML:</em> CSS can only change visual styles (colors, fonts, displays). It CANNOT reorder nodes, filter subsets of elements, compute mathematical totals, or transform the document into another format.
+          </p>
+
+          <h4>2. Method 2: Document Transformation with XSLT</h4>
+          <p>
+            <strong>XSLT</strong> is a declarative, rule-based programming language that takes an XML source tree and transforms it into an HTML/XHTML document, plain text, or another XML schema. An XSLT processor matches template rules against nodes using <strong>XPath (XML Path Language)</strong>.
+          </p>
+
+          <div class="wt-code-card">
+            <div class="wt-code-header">
+              <span>XSLT Transformation Template</span>
+              <span>XSLT Stylesheet</span>
+            </div>
+            <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+  &lt;xsl:template match="/"&gt;
+    &lt;html&gt;
+      &lt;head&gt;&lt;title&gt;University Course Catalog&lt;/title&gt;&lt;/head&gt;
+      &lt;body&gt;
+        &lt;h2&gt;B.Tech CSE Courses&lt;/h2&gt;
+        &lt;table border="1"&gt;
+          &lt;tr bgcolor="#7c3aed" style="color:white;"&gt;
+            &lt;th&gt;Code&lt;/th&gt;&lt;th&gt;Title&lt;/th&gt;&lt;th&gt;Credits&lt;/th&gt;
+          &lt;/tr&gt;
+          &lt;xsl:for-each select="catalog/course[credits &gt;= 3]"&gt;
+            &lt;xsl:sort select="title" order="ascending" /&gt;
+            &lt;tr&gt;
+              &lt;td&gt;&lt;xsl:value-of select="@code" /&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;xsl:value-of select="title" /&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;xsl:value-of select="credits" /&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/xsl:for-each&gt;
+        &lt;/table&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+  &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 11 -->
+      <section id="xml-processors-dom-sax" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 2.11 • Syllabus Section</span>
+            <h2 class="wt-topic-title">Using XML Processors: DOM and SAX</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="xml-processors-dom-sax">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="2" data-test-key="xml-processors-dom-sax" data-test-title="Using XML Processors: DOM and SAX">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            An <strong>XML Processor (Parser)</strong> is a software library that reads XML document files, verifies well-formedness and schema validity, and provides an API for application code to read or modify data. The two primary parsing paradigms are <strong>DOM</strong> and <strong>SAX</strong>.
+          </p>
+
+          <h4>1. DOM Parser (Document Object Model)</h4>
+          <ul>
+            <li><strong>Model:</strong> Tree-based, in-memory object representation.</li>
+            <li><strong>Operation:</strong> Reads the entire XML file into RAM, instantiates node objects for every tag and attribute, and builds an in-memory tree.</li>
+            <li><strong>Pros:</strong> Allows random access, bidirectional navigation (parent/child/sibling), and live in-memory updates/serialization.</li>
+            <li><strong>Cons:</strong> High memory consumption (often 5x to 10x the raw file size). Infeasible for gigabyte-scale datasets.</li>
+          </ul>
+
+          <h4>2. SAX Parser (Simple API for XML)</h4>
+          <ul>
+            <li><strong>Model:</strong> Event-driven, streaming sequential push parser (created by David Megginson).</li>
+            <li><strong>Operation:</strong> Reads the XML stream byte-by-byte from top to bottom. It does NOT construct an in-memory tree. As tags are encountered, it fires callback events to an application-supplied <code>ContentHandler</code>:
+              <ul>
+                <li><code>startDocument()</code> and <code>endDocument()</code></li>
+                <li><code>startElement(uri, localName, qName, attributes)</code></li>
+                <li><code>characters(char[] ch, int start, int length)</code></li>
+                <li><code>endElement(uri, localName, qName)</code></li>
+              </ul>
+            </li>
+            <li><strong>Pros:</strong> Constant memory footprint \(O(1)\), blazing fast speed, can parse multi-gigabyte files effortlessly.</li>
+            <li><strong>Cons:</strong> Strictly forward-only, read-only; cannot navigate backwards or update nodes in place.</li>
+          </ul>
+
+          <h4>3. DOM vs SAX Architecture Comparison Matrix</h4>
+          <div class="wt-table-wrap">
+            <table class="wt-table">
+              <thead>
+                <tr>
+                  <th>Criteria</th>
+                  <th>DOM Parser (Tree Model)</th>
+                  <th>SAX Parser (Event Model)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Memory Consumption</strong></td>
+                  <td>High \(O(N)\) — scales with file size</td>
+                  <td>Extremely Low \(O(1)\) — constant memory</td>
+                </tr>
+                <tr>
+                  <td><strong>Navigation</strong></td>
+                  <td>Bidirectional random access across tree</td>
+                  <td>Forward-only, single-pass streaming</td>
+                </tr>
+                <tr>
+                  <td><strong>Document Modification</strong></td>
+                  <td>Native in-place creation, editing, deletion</td>
+                  <td>Read-only (cannot mutate source tree directly)</td>
+                </tr>
+                <tr>
+                  <td><strong>Best Use Case</strong></td>
+                  <td>Small-to-medium files requiring manipulation &amp; XPath</td>
+                  <td>Large datasets, read-only parsing, log scanning</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Unit 2 Mixed Practice Test Section -->
+      <section id="unit2-mixed" class="wt-topic-section">
+        <div class="wt-topic-header-card" style="border-left-color: #6366f1; background: linear-gradient(135deg, #ffffff 0%, #f5f3ff 100%);">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num" style="color: #6366f1;">Comprehensive Review • Unit 2</span>
+            <h2 class="wt-topic-title">Unit 2 Mixed Practice Examination</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="unit2-mixed">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="2" data-test-key="unit2-mixed" data-test-title="Unit 2 Comprehensive Practice Test" style="background: linear-gradient(135deg, #6366f1 0%, #7c3aed 100%);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+              <span>Start Unit Practice Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            The <strong>Unit 2 Mixed Practice Examination</strong> comprehensively tests your understanding across JavaScript execution, prototypal object models, HTML5 forms/tables, CSS layout engines, DTD vs XSD validation rules, XML DOM methods, XSLT, and SAX parsers.
+          </p>
+          <div class="wt-callout wt-callout-tip">
+            <div class="wt-callout-icon">🏆</div>
+            <div class="wt-callout-body">
+              <strong>Study Advice:</strong> Complete all 11 individual topic tests before attempting this mixed 20-question review exam to evaluate semester exam readiness!
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom Unit Navigation Pagination -->
+      <nav class="wt-unit-pagination">
+        <a href="unit1.html" class="wt-pagination-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <div class="wt-pagination-text">
+            <span class="wt-pagination-label">Previous Unit</span>
+            <span class="wt-pagination-title">Unit 1: Internet &amp; Web Foundations</span>
+          </div>
+        </a>
+
+        <a href="unit3.html" class="wt-pagination-btn wt-pagination-next">
+          <div class="wt-pagination-text" style="text-align: right;">
+            <span class="wt-pagination-label">Next Unit</span>
+            <span class="wt-pagination-title">Unit 3: Web Services &amp; Ajax</span>
+          </div>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </nav>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="wt-footer">
+    <div class="wt-container">
+      <div class="wt-footer-grid">
+        <div class="wt-footer-brand">
+          <h4>WebTech Learning Portal</h4>
+          <p>
+            An educational documentation and examination platform created for <strong>Web Technology (Course Code: CS35302)</strong>, Bachelor of Technology in Computer Science &amp; Engineering, Semester 5, at <strong>Quantum School of Technology, Quantum University</strong>.
+          </p>
+        </div>
+
+        <div class="wt-footer-col">
+          <h5>Course Navigation</h5>
+          <ul class="wt-footer-links">
+            <li><a href="unit1.html">Unit 1: Internet &amp; Web Foundations</a></li>
+            <li><a href="unit2.html">Unit 2: Client-Side Technologies &amp; XML</a></li>
+            <li><a href="unit3.html">Unit 3: Web Services &amp; Ajax</a></li>
+            <li><a href="unit4.html">Unit 4: Interactive and Social Web</a></li>
+            <li><a href="unit5.html">Unit 5: Semantic Web &amp; Web Intelligence</a></li>
+          </ul>
+        </div>
+
+        <div class="wt-footer-col">
+          <h5>Examination Tools</h5>
+          <ul class="wt-footer-links">
+            <li><a href="#" data-action="open-search">Search Syllabus Topics</a></li>
+            <li><a href="unit1.html#unit1-mixed">Unit 1 Mixed Practice Test</a></li>
+            <li><a href="unit2.html#unit2-mixed">Unit 2 Mixed Practice Test</a></li>
+            <li><a href="unit3.html#unit3-mixed">Unit 3 Mixed Practice Test</a></li>
+            <li><a href="unit4.html#unit4-mixed">Unit 4 Mixed Practice Test</a></li>
+            <li><a href="unit5.html#unit5-mixed">Unit 5 Mixed Practice Test</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="wt-footer-bottom">
+        <div>&copy; WebTech Learning. Course CS35302 – Quantum University. All rights reserved.</div>
+        <div>Built with HTML5, CSS3, &amp; Vanilla JavaScript. Zero heavy frameworks.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data/search-index.js"></script>
+  <script src="data/unit1-questions.js"></script>
+  <script src="data/unit2-questions.js"></script>
+  <script src="data/unit3-questions.js"></script>
+  <script src="data/unit4-questions.js"></script>
+  <script src="data/unit5-questions.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/test-engine.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/navigation.js"></script>
+  <script>
+    function updateUnit2Sidebar() {
+      if (!window.WebTechStorage) return;
+      var stats = window.WebTechStorage.getUnitStats(2);
+      var fill = document.getElementById('wt-sidebar-unit2-fill');
+      var count = document.getElementById('wt-sidebar-unit2-count');
+      if (fill && count) {
+        fill.style.width = stats.percentage + '%';
+        count.textContent = stats.completedTopics + '/' + stats.totalTopics;
+      }
+      var topics = [
+        'intro-javascript', 'objects-javascript', 'dhtml-javascript',
+        'lists-tables-images-forms-frames', 'css', 'dtd',
+        'dhtml-concepts', 'xml-schemas', 'object-models-dom',
+        'presenting-xml', 'xml-processors-dom-sax'
+      ];
+      topics.forEach(function(key) {
+        var el = document.querySelector('.wt-toc-check[data-toc-key="' + key + '"]');
+        if (el) {
+          if (window.WebTechStorage.isCompleted(key)) {
+            el.classList.add('completed');
+          } else {
+            el.classList.remove('completed');
+          }
+        }
+      });
+    }
+    document.addEventListener('DOMContentLoaded', updateUnit2Sidebar);
+    window.addEventListener('webtech:progress_updated', updateUnit2Sidebar);
+  </script>
+</body>
+</html>

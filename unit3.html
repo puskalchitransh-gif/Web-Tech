@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit 3: Web Services &amp; Ajax Architecture – WebTech Learning (CS35302)</title>
+  <meta name="description" content="Complete documentation and topic-wise MCQ examination for Unit 3: Web Services & Ajax Architecture. Course CS35302, Quantum University." />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/documentation.css" />
+  <link rel="stylesheet" href="css/test-system.css" />
+</head>
+<body>
+  <!-- Header / Navigation Bar -->
+  <header class="wt-navbar">
+    <div class="wt-container wt-nav-inner">
+      <div class="wt-nav-left">
+        <button class="wt-mobile-toggle" id="wt-mobile-menu-btn" aria-label="Toggle Syllabus Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <a href="index.html" class="wt-brand">
+          <div class="wt-brand-logo">WT</div>
+          <div class="wt-brand-text">
+            <span class="wt-site-title">WebTech Learning</span>
+            <span class="wt-course-sub">CS35302 • B.Tech CSE Sem 5</span>
+          </div>
+        </a>
+      </div>
+
+      <nav>
+        <ul class="wt-nav-links">
+          <li><a href="index.html" class="wt-nav-link">Home</a></li>
+          <li><a href="unit1.html" class="wt-nav-link">Unit 1</a></li>
+          <li><a href="unit2.html" class="wt-nav-link">Unit 2</a></li>
+          <li><a href="unit3.html" class="wt-nav-link active">Unit 3</a></li>
+          <li><a href="unit4.html" class="wt-nav-link">Unit 4</a></li>
+          <li><a href="unit5.html" class="wt-nav-link">Unit 5</a></li>
+        </ul>
+      </nav>
+
+      <div class="wt-nav-right">
+        <button class="wt-search-trigger" data-action="open-search" title="Search Syllabus (Press / or Ctrl+K)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <span>Search syllabus...</span>
+          <kbd class="wt-search-shortcut">/</kbd>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wt-sidebar-overlay" id="wt-sidebar-overlay"></div>
+
+  <!-- Documentation Layout Grid -->
+  <div class="wt-container wt-doc-layout">
+    <!-- Sticky Sidebar Table of Contents -->
+    <aside class="wt-sidebar" id="wt-sidebar">
+      <div class="wt-sidebar-header">
+        <div class="wt-sidebar-unit-title">Unit 3: Web Services &amp; Ajax</div>
+        <div class="wt-sidebar-progress-wrap">
+          <span>Topics Complete:</span>
+          <div class="wt-sidebar-progress-bar">
+            <div class="wt-sidebar-progress-fill" id="wt-sidebar-unit3-fill" style="width: 0%;"></div>
+          </div>
+          <span id="wt-sidebar-unit3-count">0/9</span>
+        </div>
+      </div>
+
+      <nav class="wt-sidebar-nav">
+        <div class="wt-toc-group-label">Syllabus Topics (9)</div>
+        <ul class="wt-toc-list">
+          <li class="wt-toc-item"><a href="#intro-web-services" class="wt-toc-link"><span>1. Intro to Web Services</span><span class="wt-toc-check" data-toc-key="intro-web-services">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#uddi" class="wt-toc-link"><span>2. UDDI Discovery Registry</span><span class="wt-toc-check" data-toc-key="uddi">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#soap" class="wt-toc-link"><span>3. SOAP Protocol</span><span class="wt-toc-check" data-toc-key="soap">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#wsdl" class="wt-toc-link"><span>4. WSDL Service Descriptions</span><span class="wt-toc-check" data-toc-key="wsdl">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#web-service-architecture" class="wt-toc-link"><span>5. Web Service Architecture</span><span class="wt-toc-check" data-toc-key="web-service-architecture">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#developing-deploying-web-services" class="wt-toc-link"><span>6. Developing &amp; Deploying Services</span><span class="wt-toc-check" data-toc-key="developing-deploying-web-services">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#ajax-performance" class="wt-toc-link"><span>7. Ajax &amp; Web Performance</span><span class="wt-toc-check" data-toc-key="ajax-performance">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#programming-ajax" class="wt-toc-link"><span>8. Programming in Ajax</span><span class="wt-toc-check" data-toc-key="programming-ajax">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#corba" class="wt-toc-link"><span>9. CORBA Architecture</span><span class="wt-toc-check" data-toc-key="corba">✓</span></a></li>
+        </ul>
+
+        <div class="wt-sidebar-test-card">
+          <h6>Unit Practice Exam</h6>
+          <p>Test your comprehensive understanding across all 9 topics of Unit 3.</p>
+          <a href="#unit3-mixed" class="wt-btn wt-btn-sm wt-btn-accent" style="width: 100%; justify-content: center;">
+            View Practice Exam
+          </a>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="wt-doc-content">
+      <!-- Unit Banner -->
+      <section class="wt-unit-overview-banner">
+        <span class="wt-unit-tag">Course CS35302 • Semester 5</span>
+        <h1 class="wt-unit-heading">Unit 3: Web Services &amp; Ajax Architecture</h1>
+        <p class="wt-unit-lead">
+          Explore distributed enterprise integration and asynchronous web application engineering. This unit covers Service-Oriented Architecture (SOA), web services fundamentals, UDDI service discovery registries, SOAP XML envelope messaging, WSDL contract definitions, the Publish-Find-Bind architectural triangle, JAX-WS deployment, Ajax asynchronous web performance paradigms, XMLHttpRequest &amp; Fetch programming, and legacy distributed object architectures via CORBA.
+        </p>
+        <div class="wt-unit-meta-bar">
+          <div><strong>Syllabus Code:</strong> CS35302 Unit 3</div>
+          <div><strong>Topics:</strong> 9 Detailed Sections</div>
+          <div><strong>Topic Tests:</strong> 9 Separate Tests (20 MCQs each)</div>
+          <div><strong>Mixed Exam:</strong> 20 Questions</div>
+        </div>
+      </section>
+
+      <!-- Topic 1 -->
+      <section id="intro-web-services" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 3.1 • Syllabus Section</span>
+            <h2 class="wt-topic-title">Introduction to Web Services</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="intro-web-services">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="3" data-test-key="intro-web-services" data-test-title="Introduction to Web Services">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            According to the <strong>W3C</strong>, a <strong>Web Service</strong> is a software system designed to support interoperable machine-to-machine interaction over a network. It provides a formal interface described in a machine-processable format (specifically WSDL). Other systems interact with the web service using SOAP or REST messages conveyed via HTTP with an XML or JSON serialization in conjunction with other web-related standards.
+          </p>
+
+          <h4>1. Core Characteristics of Web Services</h4>
+          <ul>
+            <li><strong>Platform &amp; Language Independence:</strong> A web service authored in Java on Linux can be consumed seamlessly by a C# .NET application on Windows or a Python script on macOS.</li>
+            <li><strong>Loose Coupling:</strong> Consumers and providers are decoupled in time and implementation. The client only needs the contract (WSDL or OpenAPI), not the server's internal object model.</li>
+            <li><strong>Standardized Communication Protocols:</strong> Employs ubiquitous Internet protocols (HTTP, HTTPS, SMTP) that navigate corporate firewalls without requiring custom port configurations.</li>
+            <li><strong>Composability:</strong> Discrete granular web services can be aggregated into complex business workflows using orchestration languages (e.g., WS-BPEL).</li>
+          </ul>
+
+          <h4>2. Architectural Paradigms: SOAP vs REST</h4>
+          <div class="wt-table-wrap">
+            <table class="wt-table">
+              <thead>
+                <tr>
+                  <th>Criteria</th>
+                  <th>SOAP (Simple Object Access Protocol)</th>
+                  <th>REST (Representational State Transfer)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Nature</strong></td>
+                  <td>Strict protocol with formal specifications</td>
+                  <td>Architectural style using standard HTTP semantics</td>
+                </tr>
+                <tr>
+                  <td><strong>Data Format</strong></td>
+                  <td>Exclusively XML (SOAP Envelope)</td>
+                  <td>Flexible (JSON, XML, HTML, plain text)</td>
+                </tr>
+                <tr>
+                  <td><strong>Interface Contract</strong></td>
+                  <td>Mandatory formal contract (WSDL)</td>
+                  <td>Optional / semi-formal (OpenAPI / Swagger)</td>
+                </tr>
+                <tr>
+                  <td><strong>Transport</strong></td>
+                  <td>HTTP, HTTPS, SMTP, JMS, TCP</td>
+                  <td>Exclusively HTTP / HTTPS</td>
+                </tr>
+                <tr>
+                  <td><strong>Enterprise Features</strong></td>
+                  <td>Native WS-Security, WS-ReliableMessaging, WS-AtomicTransaction</td>
+                  <td>Rely on underlying transport (TLS/HTTPS, OAuth 2.0)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 2 -->
+      <section id="uddi" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 3.2 • Syllabus Section</span>
+            <h2 class="wt-topic-title">UDDI (Universal Description, Discovery and Integration)</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="uddi">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="3" data-test-key="uddi" data-test-title="UDDI">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            <strong>UDDI</strong> is an OASIS standard and XML-based registry that enables businesses to publish service listings, discover partner web services, and define how services interact over the Internet. It functions conceptually as the <em>"Telephone Directory"</em> of Service-Oriented Architecture.
+          </p>
+
+          <h4>1. The Three Registry Information Categories</h4>
+          <ul>
+            <li><strong>White Pages:</strong> Business name, textual description, administrative contacts, phone numbers, and unique corporate identifiers (e.g., Dun &amp; Bradstreet D-U-N-S numbers, tax identification codes).</li>
+            <li><strong>Yellow Pages:</strong> Categorization of businesses and services using standard industrial taxonomy classification schemes, such as <strong>NAICS</strong> (North American Industry Classification System) or <strong>UNSPSC</strong> (United Nations Standard Products and Services Code).</li>
+            <li><strong>Green Pages:</strong> In-depth technical specifications describing how to invoke the service, including network endpoint URLs, communication protocols, and references to formal WSDL interfaces.</li>
+          </ul>
+
+          <h4>2. Core UDDI XML Data Structures</h4>
+          <div class="wt-table-wrap">
+            <table class="wt-table">
+              <thead>
+                <tr>
+                  <th>Data Entity</th>
+                  <th>XML Tag</th>
+                  <th>Description &amp; Role</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Business Entity</strong></td>
+                  <td><code>&lt;businessEntity&gt;</code></td>
+                  <td>Represents the service provider company; contains White Pages and Yellow Pages information.</td>
+                </tr>
+                <tr>
+                  <td><strong>Business Service</strong></td>
+                  <td><code>&lt;businessService&gt;</code></td>
+                  <td>Represents a logical group of web services offered by the business entity.</td>
+                </tr>
+                <tr>
+                  <td><strong>Binding Template</strong></td>
+                  <td><code>&lt;bindingTemplate&gt;</code></td>
+                  <td>Contains technical endpoint address (Green Pages) where the service is hosted.</td>
+                </tr>
+                <tr>
+                  <td><strong>Technical Model</strong></td>
+                  <td><code>&lt;tModel&gt;</code></td>
+                  <td>The fingerprint technical specification or interface contract (points to WSDL).</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 3 -->
+      <section id="soap" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 3.3 • Syllabus Section</span>
+            <h2 class="wt-topic-title">SOAP (Simple Object Access Protocol)</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="soap">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="3" data-test-key="soap" data-test-title="SOAP">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            <strong>SOAP</strong> is a W3C-standard XML-based messaging protocol for exchanging structured data in decentralized, distributed environments. A SOAP message is fundamentally an XML document consisting of distinct structural layers.
+          </p>
+
+          <h4>1. Structural Anatomy of a SOAP Message</h4>
+          <ol>
+            <li><strong>SOAP Envelope (<code>&lt;soap:Envelope&gt;</code>):</strong> The mandatory root element that identifies the XML document as a SOAP message and defines namespace prefixes.</li>
+            <li><strong>SOAP Header (<code>&lt;soap:Header&gt;</code>):</strong> An optional element containing metadata and cross-cutting enterprise concerns (authentication tokens, digital signatures, transaction identifiers, routing instructions).
+              <ul>
+                <li><code>mustUnderstand="1"</code>: A critical attribute. If a recipient or intermediary node cannot process a header with this attribute set to 1, it MUST reject the message and generate a SOAP Fault.</li>
+              </ul>
+            </li>
+            <li><strong>SOAP Body (<code>&lt;soap:Body&gt;</code>):</strong> The mandatory element containing the actual application request payload or response data.</li>
+            <li><strong>SOAP Fault (<code>&lt;soap:Fault&gt;</code>):</strong> A standardized sub-element located inside the Body used exclusively for returning error status and diagnostic information (contains <code>faultcode</code>, <code>faultstring</code>, <code>faultactor</code>, and <code>detail</code>).</li>
+          </ol>
+
+          <div class="wt-code-card">
+            <div class="wt-code-header">
+              <span>Standard SOAP 1.2 Request Envelope</span>
+              <span>XML / SOAP</span>
+            </div>
+            <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"
+               xmlns:wt="http://quantumuniversity.edu/webtech"&gt;
+  &lt;soap:Header&gt;
+    &lt;wt:AuthToken soap:mustUnderstand="true"&gt;
+      eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+    &lt;/wt:AuthToken&gt;
+  &lt;/soap:Header&gt;
+  &lt;soap:Body&gt;
+    &lt;wt:GetStudentDetailsRequest&gt;
+      &lt;wt:RollNumber&gt;2101034&lt;/wt:RollNumber&gt;
+      &lt;wt:Semester&gt;5&lt;/wt:Semester&gt;
+    &lt;/wt:GetStudentDetailsRequest&gt;
+  &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 4 -->
+      <section id="wsdl" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 3.4 • Syllabus Section</span>
+            <h2 class="wt-topic-title">WSDL (Web Services Description Language)</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="wsdl">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="3" data-test-key="wsdl" data-test-title="WSDL">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            <strong>WSDL</strong> is an XML format for describing network services as a set of endpoints operating on messages containing either document-oriented or procedure-oriented information. It serves as the programmatic contract between client and server.
+          </p>
+
+          <h4>1. Core Elements of a WSDL 1.1 Document</h4>
+          <ul>
+            <li><strong><code>&lt;types&gt;</code>:</strong> Container for data type definitions using XML Schema (XSD) syntax.</li>
+            <li><strong><code>&lt;message&gt;</code>:</strong> Abstract, typed definition of the data being communicated (each input and output parameter is defined as a message part).</li>
+            <li><strong><code>&lt;portType&gt;</code>:</strong> An abstract set of operations supported by one or more endpoints. An operation corresponds to a method/function in standard OOP (e.g., <code>getGrade</code>).</li>
+            <li><strong><code>&lt;binding&gt;</code>:</strong> Concrete protocol and data format specifications for a particular <code>portType</code> (e.g., binding the abstract operations to SOAP 1.2 over HTTP with <code>style="document"</code>).</li>
+            <li><strong><code>&lt;port&gt;</code>:</strong> Defines an individual physical network address (URL) for a binding.</li>
+            <li><strong><code>&lt;service&gt;</code>:</strong> A collection of related ports.</li>
+          </ul>
+
+          <div class="wt-code-card">
+            <div class="wt-code-header">
+              <span>High-Level WSDL 1.1 Hierarchy</span>
+              <span>WSDL Architecture</span>
+            </div>
+            <pre><code>&lt;definitions name="CourseService" ...&gt;
+  &lt;types&gt; ... XSD Schemas ... &lt;/types&gt;
+  &lt;message name="GetStudentRequest"&gt; ... &lt;/message&gt;
+  &lt;message name="GetStudentResponse"&gt; ... &lt;/message&gt;
+  
+  &lt;portType name="CoursePortType"&gt;
+    &lt;operation name="getStudent"&gt;
+      &lt;input message="tns:GetStudentRequest" /&gt;
+      &lt;output message="tns:GetStudentResponse" /&gt;
+    &lt;/operation&gt;
+  &lt;/portType&gt;
+  
+  &lt;binding name="CourseSoapBinding" type="tns:CoursePortType"&gt;
+    &lt;soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" /&gt;
+    ...
+  &lt;/binding&gt;
+  
+  &lt;service name="CourseService"&gt;
+    &lt;port name="CoursePort" binding="tns:CourseSoapBinding"&gt;
+      &lt;soap:address location="https://api.quantumuniversity.edu/ws/course" /&gt;
+    &lt;/port&gt;
+  &lt;/service&gt;
+&lt;/definitions&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 5 -->
+      <section id="web-service-architecture" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 3.5 • Syllabus Section</span>
+            <h2 class="wt-topic-title">Web Service Architecture</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="web-service-architecture">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="3" data-test-key="web-service-architecture" data-test-title="Web Service Architecture">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            The foundational architecture of Web Services is built upon the classic <strong>SOA Service Triangle</strong> comprising three distinct roles and three fundamental operations.
+          </p>
+
+          <h4>1. The Three Primary Architectural Roles</h4>
+          <ul>
+            <li><strong>Service Provider:</strong> The platform or organization that designs, develops, hosts, and operates the web service. It authors the WSDL description and registers its availability with a registry.</li>
+            <li><strong>Service Requester (Consumer):</strong> The application client requiring specific business functionality. It queries the registry, extracts the WSDL contract, generates a client stub proxy, and invokes the service.</li>
+            <li><strong>Service Registry:</strong> The searchable central directory (such as UDDI) where service providers publish service metadata and where consumers query for needed capabilities.</li>
+          </ul>
+
+          <h4>2. The Three Fundamental Operations (Publish, Find, Bind)</h4>
+          <ol>
+            <li><strong>Publish:</strong> The Service Provider transmits its business profile and WSDL technical binding to the Service Registry using the UDDI Publication API.</li>
+            <li><strong>Find:</strong> The Service Requester executes a search query against the Service Registry (using UDDI Inquiry API) to locate active services that satisfy its functional requirements.</li>
+            <li><strong>Bind:</strong> After obtaining the WSDL file from the registry, the Service Requester parses the endpoint address and binding specifics, binds directly to the Service Provider, and exchanges SOAP messages over HTTP at runtime.</li>
+          </ol>
+
+          <div class="wt-callout wt-callout-note">
+            <div class="wt-callout-icon">💡</div>
+            <div class="wt-callout-body">
+              <strong>Enterprise Service Bus (ESB) &amp; Orchestration</strong>
+              In modern enterprise SOA, an <strong>Enterprise Service Bus (ESB)</strong> acts as an intelligent intermediary providing protocol transformation, message routing, and security. Enterprise workflows are automated using <strong>Orchestration</strong> (WS-BPEL, where a central coordinator controls service execution) or <strong>Choreography</strong> (peer-to-peer decentralized collaboration).
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 6 -->
+      <section id="developing-deploying-web-services" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 3.6 • Syllabus Section</span>
+            <h2 class="wt-topic-title">Developing and Deploying Web Services</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="developing-deploying-web-services">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="3" data-test-key="developing-deploying-web-services" data-test-title="Developing and Deploying Web Services">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            In enterprise environments, web services are developed using standardized platforms such as the Java EE / Jakarta EE framework through <strong>JAX-WS (Java API for XML-Based Web Services)</strong> and <strong>JAX-RS (Java API for RESTful Web Services)</strong>.
+          </p>
+
+          <h4>1. Code-First vs Contract-First Development</h4>
+          <ul>
+            <li><strong>Code-First (Bottom-Up):</strong> The developer writes Java / C# service implementation classes first and annotates them. The framework's tooling (e.g., <code>wsgen</code>) automatically generates the WSDL file and XML schemas at compile time or deployment. Fast and convenient, but can produce fragile XML schemas tied to language internals.</li>
+            <li><strong>Contract-First (Top-Down):</strong> The developer first designs the XML Schema (XSD) and WSDL contract independently. Tools like <code>wsimport</code> (in Java) or <code>svcutil</code> (in .NET) then generate the strongly typed Java service skeletons and client proxies. Considered best practice in enterprise distributed computing.</li>
+          </ul>
+
+          <div class="wt-code-card">
+            <div class="wt-code-header">
+              <span>JAX-WS Annotated Service Endpoint Implementation (SEI)</span>
+              <span>Java JAX-WS</span>
+            </div>
+            <pre><code>package edu.quantumuniversity.webtech;
+
+import javax.jws.WebService;
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+import javax.jws.soap.SOAPBinding;
+
+@WebService(name = "GradeCalculatorService",
+            targetNamespace = "http://quantumuniversity.edu/grades")
+@SOAPBinding(style = SOAPBinding.Style.DOCUMENT)
+public class GradeCalculatorService {
+
+    @WebMethod(operationName = "calculateSGPA")
+    public double calculateSGPA(
+        @WebParam(name = "theoryMarks") int theoryMarks,
+        @WebParam(name = "practicalMarks") int practicalMarks) {
+        
+        return (theoryMarks * 0.7) + (practicalMarks * 0.3);
+    }
+}</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 7 -->
+      <section id="ajax-performance" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 3.7 • Syllabus Section</span>
+            <h2 class="wt-topic-title">Ajax – Improving Web Page Performance</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="ajax-performance">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="3" data-test-key="ajax-performance" data-test-title="Ajax – Improving Web Page Performance">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            In February 2005, <strong>Jesse James Garrett</strong> of Adaptive Path coined the acronym <strong>Ajax (Asynchronous JavaScript and XML)</strong>. Prior to Ajax, web interactions adhered to a synchronous <em>"Click &rarr; Wait &rarr; Full Page Refresh"</em> lifecycle: submitting a single form field required the browser to blank the screen, discard the entire DOM, download a complete new HTML page, re-parse styles, and re-execute all scripts.
+          </p>
+
+          <h4>1. How Ajax Revolutionized Web Performance</h4>
+          <ul>
+            <li><strong>Partial Page Updates:</strong> Only the specific section of the UI requiring updated data is re-rendered (e.g., updating a score counter without reloading the video playing beside it).</li>
+            <li><strong>Bandwidth Reduction:</strong> Instead of transmitting 500 KB of repeated HTML boilerplate, headers, and navigation menus, the server transmits only a tiny 2 KB JSON payload representing the raw data values.</li>
+            <li><strong>Non-Blocking User Experience:</strong> Because data fetching runs asynchronously in the background, users can continue typing, scrolling, or interacting with the page with zero UI freezes.</li>
+          </ul>
+
+          <h4>2. Performance Engineering Strategies with Ajax</h4>
+          <ul>
+            <li><strong>Debouncing:</strong> Postponing execution of an asynchronous search request until a specified pause in keystrokes (e.g., waiting 300ms after the student stops typing).</li>
+            <li><strong>Throttling:</strong> Enforcing a maximum limit on how frequently an asynchronous call fires during rapid continuous events (such as window resizing or page scrolling).</li>
+            <li><strong>Optimistic UI:</strong> Instantly updating the local client UI immediately upon user action (e.g., toggling a "completed" checkbox) before the network response returns, rolling back only if an error occurs.</li>
+            <li><strong>Request Cancellation:</strong> Using <code>AbortController</code> to cancel outdated, pending background HTTP requests when the user rapidly changes views or filters.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Topic 8 -->
+      <section id="programming-ajax" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 3.8 • Syllabus Section</span>
+            <h2 class="wt-topic-title">Programming in Ajax (XMLHttpRequest &amp; Fetch)</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="programming-ajax">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="3" data-test-key="programming-ajax" data-test-title="Programming in Ajax">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            Modern web development implements Ajax using two primary client-side APIs: the traditional <strong><code>XMLHttpRequest</code></strong> object and the modern Promise-based <strong><code>Fetch API</code></strong> with <code>async/await</code>.
+          </p>
+
+          <h4>1. Traditional XMLHttpRequest (XHR) Lifecycle</h4>
+          <p>
+            An XHR object transitions through 5 sequential <code>readyState</code> values:
+          </p>
+          <ul>
+            <li><code>0: UNSENT</code> &mdash; Client created; <code>open()</code> not yet called.</li>
+            <li><code>1: OPENED</code> &mdash; <code>open()</code> called; headers can be set.</li>
+            <li><code>2: HEADERS_RECEIVED</code> &mdash; <code>send()</code> called; status and headers available.</li>
+            <li><code>3: LOADING</code> &mdash; Downloading response payload; <code>responseText</code> holds partial data.</li>
+            <li><code>4: DONE</code> &mdash; Operation complete.</li>
+          </ul>
+
+          <div class="wt-code-card">
+            <div class="wt-code-header">
+              <span>XMLHttpRequest vs Modern Fetch with async/await</span>
+              <span>JavaScript</span>
+            </div>
+            <pre><code>// 1. Classic XMLHttpRequest Implementation
+function loadSyllabusXHR() {
+  const xhr = new XMLHttpRequest();
+  xhr.open("GET", "/api/syllabus/unit3", true);
+  xhr.setRequestHeader("Accept", "application/json");
+
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        const data = JSON.parse(xhr.responseText);
+        console.log("XHR Success:", data);
+      } else {
+        console.error("XHR Error:", xhr.statusText);
+      }
+    }
+  };
+  xhr.send();
+}
+
+// 2. Modern Fetch API with async/await & AbortController
+async function loadSyllabusFetch(timeoutMs = 5000) {
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+
+  try {
+    const response = await fetch("/api/syllabus/unit3", {
+      method: "GET",
+      headers: { "Accept": "application/json" },
+      signal: controller.signal
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP Error: ${response.status}`);
+    }
+
+    const data = await response.json();
+    console.log("Fetch Success:", data);
+    return data;
+  } catch (err) {
+    if (err.name === 'AbortError') {
+      console.warn("Request timed out!");
+    } else {
+      console.error("Fetch Failure:", err);
+    }
+  } finally {
+    clearTimeout(timeoutId);
+  }
+}</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 9 -->
+      <section id="corba" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 3.9 • Syllabus Section</span>
+            <h2 class="wt-topic-title">CORBA (Common Object Request Broker Architecture)</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="corba">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="3" data-test-key="corba" data-test-title="CORBA">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            Defined in 1991 by the <strong>Object Management Group (OMG)</strong>, <strong>CORBA</strong> is a standard architecture for distributed object computing. It allows applications written in different programming languages running on different operating systems across heterogeneous networks to invoke methods on remote objects as if they were local in-process objects (providing complete <strong>Location Transparency</strong>).
+          </p>
+
+          <h4>1. Architectural Building Blocks of CORBA</h4>
+          <ul>
+            <li><strong>ORB (Object Request Broker):</strong> The foundational communications software bus. The ORB intercepts remote method invocations, marshals parameters into binary packets, locates the target object, and dispatches responses.</li>
+            <li><strong>IDL (Interface Definition Language):</strong> A strictly typed, declarative language used to specify object interfaces, attributes, and method signatures independently of any target programming language.</li>
+            <li><strong>Stub (Client Proxy):</strong> Generated by the IDL compiler; links into client code. When the client invokes a method, the stub marshals arguments and forwards the call to the ORB.</li>
+            <li><strong>Skeleton (Server Adapter):</strong> Generated by the IDL compiler; receives the unmarshaled request from the ORB and calls the actual implementation method on the server servant object.</li>
+            <li><strong>GIOP &amp; IIOP:</strong> <em>GIOP (General Inter-ORB Protocol)</em> defines standard message formats; <em>IIOP (Internet Inter-ORB Protocol)</em> is the mapping of GIOP directly onto TCP/IP sockets.</li>
+            <li><strong>IOR (Interoperable Object Reference):</strong> A stringified reference containing the remote host IP address, port number, and unique object key.</li>
+          </ul>
+
+          <div class="wt-code-card">
+            <div class="wt-code-header">
+              <span>Sample CORBA OMG-IDL Interface Specification</span>
+              <span>OMG IDL</span>
+            </div>
+            <pre><code>module QuantumUniversity {
+  module WebTechnology {
+    struct StudentRecord {
+      string name;
+      long rollNo;
+      float sgpa;
+    };
+
+    interface StudentPortal {
+      StudentRecord getStudent(in long rollNo);
+      boolean updateMarks(in long rollNo, in float newMarks);
+    };
+  };
+};</code></pre>
+          </div>
+
+          <h4>2. Why Web Services Replaced CORBA</h4>
+          <p>
+            Although CORBA delivered high execution speed, it struggled with massive enterprise adoption because:
+          </p>
+          <ul>
+            <li><strong>Firewall Traversal:</strong> CORBA IIOP dynamically assigned non-standard TCP ports that corporate network firewalls routinely blocked. Web Services run over standard HTTP port 80 and HTTPS port 443.</li>
+            <li><strong>Binary Complexity:</strong> CORBA utilized opaque, complex binary marshalling that made network packet debugging difficult compared to human-readable XML or JSON.</li>
+            <li><strong>Tight Coupling:</strong> CORBA stubs and ORB vendor libraries introduced tight runtime coupling between client and server versions.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Unit 3 Mixed Practice Test Section -->
+      <section id="unit3-mixed" class="wt-topic-section">
+        <div class="wt-topic-header-card" style="border-left-color: #6366f1; background: linear-gradient(135deg, #ffffff 0%, #f5f3ff 100%);">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num" style="color: #6366f1;">Comprehensive Review • Unit 3</span>
+            <h2 class="wt-topic-title">Unit 3 Mixed Practice Examination</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="unit3-mixed">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="3" data-test-key="unit3-mixed" data-test-title="Unit 3 Comprehensive Practice Test" style="background: linear-gradient(135deg, #6366f1 0%, #7c3aed 100%);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+              <span>Start Unit Practice Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            The <strong>Unit 3 Mixed Practice Examination</strong> offers 20 comprehensive questions covering SOAP XML envelopes, WSDL parts/bindings, UDDI registries, JAX-WS annotations, Ajax XMLHttpRequest ready states, Fetch Promises, and CORBA ORB architecture.
+          </p>
+          <div class="wt-callout wt-callout-tip">
+            <div class="wt-callout-icon">🏆</div>
+            <div class="wt-callout-body">
+              <strong>Semester Exam Preparation:</strong>
+              Test your understanding across all Unit 3 topics to ensure you can distinguish between SOAP and REST, explain the Publish-Find-Bind cycle, and write robust Ajax code.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom Unit Navigation Pagination -->
+      <nav class="wt-unit-pagination">
+        <a href="unit2.html" class="wt-pagination-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <div class="wt-pagination-text">
+            <span class="wt-pagination-label">Previous Unit</span>
+            <span class="wt-pagination-title">Unit 2: Client-Side Technologies &amp; XML</span>
+          </div>
+        </a>
+
+        <a href="unit4.html" class="wt-pagination-btn wt-pagination-next">
+          <div class="wt-pagination-text" style="text-align: right;">
+            <span class="wt-pagination-label">Next Unit</span>
+            <span class="wt-pagination-title">Unit 4: Interactive and Social Web</span>
+          </div>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </nav>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="wt-footer">
+    <div class="wt-container">
+      <div class="wt-footer-grid">
+        <div class="wt-footer-brand">
+          <h4>WebTech Learning Portal</h4>
+          <p>
+            An educational documentation and examination platform created for <strong>Web Technology (Course Code: CS35302)</strong>, Bachelor of Technology in Computer Science &amp; Engineering, Semester 5, at <strong>Quantum School of Technology, Quantum University</strong>.
+          </p>
+        </div>
+
+        <div class="wt-footer-col">
+          <h5>Course Navigation</h5>
+          <ul class="wt-footer-links">
+            <li><a href="unit1.html">Unit 1: Internet &amp; Web Foundations</a></li>
+            <li><a href="unit2.html">Unit 2: Client-Side Technologies &amp; XML</a></li>
+            <li><a href="unit3.html">Unit 3: Web Services &amp; Ajax</a></li>
+            <li><a href="unit4.html">Unit 4: Interactive and Social Web</a></li>
+            <li><a href="unit5.html">Unit 5: Semantic Web &amp; Web Intelligence</a></li>
+          </ul>
+        </div>
+
+        <div class="wt-footer-col">
+          <h5>Examination Tools</h5>
+          <ul class="wt-footer-links">
+            <li><a href="#" data-action="open-search">Search Syllabus Topics</a></li>
+            <li><a href="unit1.html#unit1-mixed">Unit 1 Mixed Practice Test</a></li>
+            <li><a href="unit2.html#unit2-mixed">Unit 2 Mixed Practice Test</a></li>
+            <li><a href="unit3.html#unit3-mixed">Unit 3 Mixed Practice Test</a></li>
+            <li><a href="unit4.html#unit4-mixed">Unit 4 Mixed Practice Test</a></li>
+            <li><a href="unit5.html#unit5-mixed">Unit 5 Mixed Practice Test</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="wt-footer-bottom">
+        <div>&copy; WebTech Learning. Course CS35302 – Quantum University. All rights reserved.</div>
+        <div>Built with HTML5, CSS3, &amp; Vanilla JavaScript. Zero heavy frameworks.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data/search-index.js"></script>
+  <script src="data/unit1-questions.js"></script>
+  <script src="data/unit2-questions.js"></script>
+  <script src="data/unit3-questions.js"></script>
+  <script src="data/unit4-questions.js"></script>
+  <script src="data/unit5-questions.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/test-engine.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/navigation.js"></script>
+  <script>
+    function updateUnit3Sidebar() {
+      if (!window.WebTechStorage) return;
+      var stats = window.WebTechStorage.getUnitStats(3);
+      var fill = document.getElementById('wt-sidebar-unit3-fill');
+      var count = document.getElementById('wt-sidebar-unit3-count');
+      if (fill && count) {
+        fill.style.width = stats.percentage + '%';
+        count.textContent = stats.completedTopics + '/' + stats.totalTopics;
+      }
+      var topics = [
+        'intro-web-services', 'uddi', 'soap', 'wsdl',
+        'web-service-architecture', 'developing-deploying-web-services',
+        'ajax-performance', 'programming-ajax', 'corba'
+      ];
+      topics.forEach(function(key) {
+        var el = document.querySelector('.wt-toc-check[data-toc-key="' + key + '"]');
+        if (el) {
+          if (window.WebTechStorage.isCompleted(key)) {
+            el.classList.add('completed');
+          } else {
+            el.classList.remove('completed');
+          }
+        }
+      });
+    }
+    document.addEventListener('DOMContentLoaded', updateUnit3Sidebar);
+    window.addEventListener('webtech:progress_updated', updateUnit3Sidebar);
+  </script>
+</body>
+</html>

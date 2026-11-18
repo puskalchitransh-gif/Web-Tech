@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit 4: Interactive and Social Web – WebTech Learning (CS35302)</title>
+  <meta name="description" content="Complete documentation and topic-wise MCQ examination for Unit 4: Interactive and Social Web. Course CS35302, Quantum University." />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/documentation.css" />
+  <link rel="stylesheet" href="css/test-system.css" />
+</head>
+<body>
+  <!-- Header / Navigation Bar -->
+  <header class="wt-navbar">
+    <div class="wt-container wt-nav-inner">
+      <div class="wt-nav-left">
+        <button class="wt-mobile-toggle" id="wt-mobile-menu-btn" aria-label="Toggle Syllabus Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <a href="index.html" class="wt-brand">
+          <div class="wt-brand-logo">WT</div>
+          <div class="wt-brand-text">
+            <span class="wt-site-title">WebTech Learning</span>
+            <span class="wt-course-sub">CS35302 • B.Tech CSE Sem 5</span>
+          </div>
+        </a>
+      </div>
+
+      <nav>
+        <ul class="wt-nav-links">
+          <li><a href="index.html" class="wt-nav-link">Home</a></li>
+          <li><a href="unit1.html" class="wt-nav-link">Unit 1</a></li>
+          <li><a href="unit2.html" class="wt-nav-link">Unit 2</a></li>
+          <li><a href="unit3.html" class="wt-nav-link">Unit 3</a></li>
+          <li><a href="unit4.html" class="wt-nav-link active">Unit 4</a></li>
+          <li><a href="unit5.html" class="wt-nav-link">Unit 5</a></li>
+        </ul>
+      </nav>
+
+      <div class="wt-nav-right">
+        <button class="wt-search-trigger" data-action="open-search" title="Search Syllabus (Press / or Ctrl+K)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <span>Search syllabus...</span>
+          <kbd class="wt-search-shortcut">/</kbd>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wt-sidebar-overlay" id="wt-sidebar-overlay"></div>
+
+  <!-- Documentation Layout Grid -->
+  <div class="wt-container wt-doc-layout">
+    <!-- Sticky Sidebar Table of Contents -->
+    <aside class="wt-sidebar" id="wt-sidebar">
+      <div class="wt-sidebar-header">
+        <div class="wt-sidebar-unit-title">Unit 4: Interactive &amp; Social Web</div>
+        <div class="wt-sidebar-progress-wrap">
+          <span>Topics Complete:</span>
+          <div class="wt-sidebar-progress-bar">
+            <div class="wt-sidebar-progress-fill" id="wt-sidebar-unit4-fill" style="width: 0%;"></div>
+          </div>
+          <span id="wt-sidebar-unit4-count">0/8</span>
+        </div>
+      </div>
+
+      <nav class="wt-sidebar-nav">
+        <div class="wt-toc-group-label">Syllabus Topics (8)</div>
+        <ul class="wt-toc-list">
+          <li class="wt-toc-item"><a href="#blogs" class="wt-toc-link"><span>1. Interactive Web: Blogs</span><span class="wt-toc-check" data-toc-key="blogs">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#wikis" class="wt-toc-link"><span>2. Interactive Web: Wikis</span><span class="wt-toc-check" data-toc-key="wikis">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#social-networking" class="wt-toc-link"><span>3. Social Networking Sites</span><span class="wt-toc-check" data-toc-key="social-networking">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#tech-ajax-apps" class="wt-toc-link"><span>4. Tech Behind Apps: AJAX</span><span class="wt-toc-check" data-toc-key="tech-ajax-apps">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#tech-rss" class="wt-toc-link"><span>5. Tech Behind Apps: RSS</span><span class="wt-toc-check" data-toc-key="tech-rss">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#tech-syndication" class="wt-toc-link"><span>6. Tech Behind Apps: Syndication</span><span class="wt-toc-check" data-toc-key="tech-syndication">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#ruby-on-rails" class="wt-toc-link"><span>7. Ruby on Rails Framework</span><span class="wt-toc-check" data-toc-key="ruby-on-rails">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#open-apis" class="wt-toc-link"><span>8. Open APIs &amp; Integrations</span><span class="wt-toc-check" data-toc-key="open-apis">✓</span></a></li>
+        </ul>
+
+        <div class="wt-sidebar-test-card">
+          <h6>Unit Practice Exam</h6>
+          <p>Test your comprehensive mastery across all 8 topics of Unit 4.</p>
+          <a href="#unit4-mixed" class="wt-btn wt-btn-sm wt-btn-accent" style="width: 100%; justify-content: center;">
+            View Practice Exam
+          </a>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="wt-doc-content">
+      <!-- Unit Banner -->
+      <section class="wt-unit-overview-banner">
+        <span class="wt-unit-tag">Course CS35302 • Semester 5</span>
+        <h1 class="wt-unit-heading">Unit 4: Interactive and Social Web</h1>
+        <p class="wt-unit-lead">
+          Explore the technological revolution that transitioned the Internet from static read-only pages (Web 1.0) into the collaborative, participatory, user-generated Web 2.0. This unit covers blogs, wikis, social graph architectures, single-page application engineering via Ajax, content syndication via RSS and Atom, full-stack MVC development with Ruby on Rails, and RESTful Open APIs.
+        </p>
+        <div class="wt-unit-meta-bar">
+          <div><strong>Syllabus Code:</strong> CS35302 Unit 4</div>
+          <div><strong>Topics:</strong> 8 Detailed Sections</div>
+          <div><strong>Topic Tests:</strong> 8 Separate Tests (20 MCQs each)</div>
+          <div><strong>Mixed Exam:</strong> 20 Questions</div>
+        </div>
+      </section>
+
+      <!-- Topic 1 -->
+      <section id="blogs" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 4.1 • Syllabus Section</span>
+            <h2 class="wt-topic-title">Interactive and Social Web: Blogs</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="blogs">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="4" data-test-key="blogs" data-test-title="Interactive and Social Web: Blogs">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            A <strong>Blog</strong> (short for <em>Weblog</em>, coined by Jorn Barger in 1997 and shortened by Peter Merholz in 1999) is a regularly updated personal or corporate website where discrete content entries (posts) are displayed in <strong>reverse chronological order</strong> (newest posts appearing at the top).
+          </p>
+
+          <h4>1. Fundamental Architecture and Components of a Blog</h4>
+          <ul>
+            <li><strong>Post Entry:</strong> Title, author attribution, publish timestamp, rich body content, and categorized tags.</li>
+            <li><strong>Permalink (Permanent Link):</strong> A static, unique URL pointing permanently to a specific blog post, ensuring hyperlinks remains valid even when new content shifts the post off the front page.</li>
+            <li><strong>Comments System:</strong> An interactive discussion forum nested beneath each post, enabling two-way conversation between author and global readers.</li>
+            <li><strong>Trackback &amp; Pingback:</strong> Peer-to-peer notification mechanisms alerting Author A when Author B writes a new blog post linking to Author A's work.</li>
+            <li><strong>Blogroll:</strong> A curated list of outbound hyperlinks to other related blogs recommended by the author, forming the conversational interconnected <em>"Blogosphere"</em>.</li>
+          </ul>
+
+          <h4>2. The Evolution of Blog Content Management Systems (CMS)</h4>
+          <p>
+            Early blogs were manually edited static HTML files. The introduction of dynamic databases and server-side scripting produced automated CMS platforms (WordPress, Movable Type, Drupal). Today, blogging has evolved into modern <strong>Headless CMS</strong> systems (Strapi, Sanity) coupled with Static Site Generators (Next.js, Gatsby, Hugo) for blazing speed, and <strong>Microblogging</strong> platforms (such as X/Twitter) for high-frequency short-form updates.
+          </p>
+        </div>
+      </section>
+
+      <!-- Topic 2 -->
+      <section id="wikis" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 4.2 • Syllabus Section</span>
+            <h2 class="wt-topic-title">Interactive and Social Web: Wikis</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="wikis">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="4" data-test-key="wikis" data-test-title="Interactive and Social Web: Wikis">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            A <strong>Wiki</strong> is a collaborative hypertext publication system designed to enable anyone with browser access to freely create, edit, modify, and interlink pages using simplified markup syntax. The first wiki software, <strong>WikiWikiWeb</strong>, was created in 1995 by <strong>Ward Cunningham</strong>, named after the Hawaiian word <em>"wiki"</em>, meaning quick.
+          </p>
+
+          <h4>1. Architectural Pillars of a Wiki System</h4>
+          <ul>
+            <li><strong>Open Collaborative Editing:</strong> Any authorized visitor can click an "Edit" button and immediately update the page content directly in their browser.</li>
+            <li><strong>Simplified Wikitext Markup:</strong> Uses lightweight formatting rules (e.g., <code>[[Topic]]</code> to create an instant internal hyperlink) rather than verbose raw HTML tags.</li>
+            <li><strong>Complete Revision History &amp; Audit Trail:</strong> Every single edit is permanently preserved in the underlying database with editor username/IP, timestamp, and summary.</li>
+            <li><strong>Visual Diff Engine:</strong> Highlights exact inline additions (green) and deletions (red) between any two historical revisions.</li>
+            <li><strong>One-Click Rollback:</strong> Administrators can instantly revert vandalism or erroneous edits to the previous stable revision.</li>
+            <li><strong>Conflict Resolution:</strong> Employs optimistic locking or 3-way merge algorithms when two editors attempt to save changes to the same page concurrently.</li>
+          </ul>
+
+          <div class="wt-callout wt-callout-note">
+            <div class="wt-callout-icon">🌐</div>
+            <div class="wt-callout-body">
+              <strong>The Wikimedia / Wikipedia Paradigm</strong>
+              Wikipedia (founded in 2001 by Jimmy Wales and Larry Sanger) runs on the open-source <strong>MediaWiki</strong> software. Its immense success proves that open collaborative crowdsourcing, guided by core policies such as <strong>Neutral Point of View (NPOV)</strong> and <strong>Verifiability</strong>, can produce comprehensive, high-quality knowledge repositories.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 3 -->
+      <section id="social-networking" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 4.3 • Syllabus Section</span>
+            <h2 class="wt-topic-title">Interactive and Social Web: Social Networking Sites</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="social-networking">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="4" data-test-key="social-networking" data-test-title="Social Networking Sites">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            <strong>Social Networking Sites (SNS)</strong> are web-based platforms that enable individuals to (1) construct a public or semi-public profile within a bounded system, (2) articulate a list of other users with whom they share a connection, and (3) view and traverse their list of connections and those made by others within the system (boyd and Ellison, 2007).
+          </p>
+
+          <h4>1. The Social Graph Data Model</h4>
+          <p>
+            At the architectural core of any social network lies the <strong>Social Graph</strong>, modeled as a mathematical graph \(G = (V, E)\):
+          </p>
+          <ul>
+            <li><strong>Vertices / Nodes (\(V\)):</strong> Individual entities within the system: Users, Pages, Groups, Photos, Events.</li>
+            <li><strong>Edges (\(E\)):</strong> Relationships connecting the nodes. Can be <em>Undirected</em> (reciprocal friendship, e.g., Facebook) or <em>Directed</em> (asymmetrical follower model, e.g., Twitter/X, Instagram, GitHub).</li>
+          </ul>
+
+          <h4>2. Feed Generation: Fan-Out-On-Write vs Fan-Out-On-Read</h4>
+          <div class="wt-table-wrap">
+            <table class="wt-table">
+              <thead>
+                <tr>
+                  <th>Architecture Model</th>
+                  <th>How it Operates</th>
+                  <th>Advantages &amp; Trade-offs</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Fan-Out-on-Write (Push Model)</strong></td>
+                  <td>When user A posts a status, background workers instantly push the post ID into the pre-computed timeline cache of every single follower.</td>
+                  <td><strong>Fast Reads:</strong> When a follower opens their app, their home feed is immediately available from memory cache. <strong>Disadvantage:</strong> Highly inefficient for "celebrity" accounts with 50 million followers (the <em>Celebrity Problem</em>).</td>
+                </tr>
+                <tr>
+                  <td><strong>Fan-Out-on-Read (Pull Model)</strong></td>
+                  <td>When user B requests their timeline, the system dynamically queries the posts of all followed users, sorts them, and delivers the merged feed.</td>
+                  <td><strong>Fast Writes:</strong> Posting takes zero background worker load. <strong>Disadvantage:</strong> Expensive, slow database read queries at feed retrieval time.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="wt-callout wt-callout-tip">
+            <div class="wt-callout-icon">📈</div>
+            <div class="wt-callout-body">
+              <strong>Network Effects &amp; Metcalfe's Law</strong>
+              <strong>Metcalfe's Law</strong> states that the value of a telecommunications network is proportional to the square of the number of connected users (\(V \propto n^2\)). This explains why social networks exhibit powerful viral growth dynamics and winner-take-all market consolidation.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 4 -->
+      <section id="tech-ajax-apps" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 4.4 • Syllabus Section</span>
+            <h2 class="wt-topic-title">The Technology Behind the Application – AJAX</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="tech-ajax-apps">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="4" data-test-key="tech-ajax-apps" data-test-title="The Technology Behind the Application – AJAX">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            In modern interactive social web applications, <strong>AJAX</strong> is the underlying architectural engine that enables seamless <strong>Single Page Applications (SPAs)</strong>. Rather than treating each click as a brand new document download, SPAs load an initial HTML/JS shell once and continuously fetch and mutate data in the background.
+          </p>
+
+          <h4>1. Client-Side Routing and the HTML5 History API</h4>
+          <p>
+            To prevent full page reloads while maintaining shareable URLs and browser back/forward button history, SPAs utilize the HTML5 History API:
+          </p>
+          <ul>
+            <li><code>history.pushState(stateObj, title, url)</code>: Adds a new entry to the browser session history without triggering a network page reload.</li>
+            <li><code>history.replaceState(...)</code>: Replaces the current history entry.</li>
+            <li><code>window.addEventListener('popstate', callback)</code>: Detects when the user clicks the browser Back or Forward buttons, allowing the client-side router to render the corresponding component.</li>
+          </ul>
+
+          <h4>2. Infinite Scrolling with IntersectionObserver</h4>
+          <p>
+            Modern feeds (Instagram, LinkedIn) eliminate pagination buttons using infinite scrolling. Instead of attaching expensive scroll event listeners, modern browsers utilize the <strong><code>IntersectionObserver</code></strong> API to asynchronously detect when a sentinel footer element scrolls into view:
+          </p>
+
+          <div class="wt-code-card">
+            <div class="wt-code-header">
+              <span>High-Performance Infinite Scroll with IntersectionObserver</span>
+              <span>JavaScript</span>
+            </div>
+            <pre><code>let page = 1;
+const sentinel = document.getElementById('scroll-sentinel');
+
+const observer = new IntersectionObserver(async (entries) => {
+  const [entry] = entries;
+  if (entry.isIntersecting) {
+    // User reached the bottom of feed
+    page += 1;
+    const response = await fetch(`/api/feed?page=${page}`);
+    const newPosts = await response.json();
+    
+    appendPostsToFeed(newPosts);
+  }
+}, { rootMargin: '200px' }); // Pre-fetch 200px before user hits bottom
+
+observer.observe(sentinel);</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 5 -->
+      <section id="tech-rss" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 4.5 • Syllabus Section</span>
+            <h2 class="wt-topic-title">The Technology Behind the Application – RSS</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="tech-rss">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="4" data-test-key="tech-rss" data-test-title="The Technology Behind the Application – RSS">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            <strong>RSS (Really Simple Syndication / Rich Site Summary)</strong> is an XML-based data format that allows content publishers to distribute automated feeds of frequently updated content (blog posts, news headlines, podcast episodes) directly to feed aggregators and readers.
+          </p>
+
+          <h4>1. Structure of an RSS 2.0 Document</h4>
+          <p>
+            An RSS document is wrapped in a top-level <code>&lt;rss version="2.0"&gt;</code> element containing a single <code>&lt;channel&gt;</code> element with three mandatory channel sub-elements:
+          </p>
+          <ul>
+            <li><code>&lt;title&gt;</code>: The name of the channel / feed.</li>
+            <li><code>&lt;link&gt;</code>: The corresponding HTML website URL.</li>
+            <li><code>&lt;description&gt;</code>: A phrase or sentence describing the channel.</li>
+          </ul>
+
+          <div class="wt-code-card">
+            <div class="wt-code-header">
+              <span>Standard RSS 2.0 Feed with Podcasting Enclosure</span>
+              <span>RSS 2.0 XML</span>
+            </div>
+            <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"&gt;
+  &lt;channel&gt;
+    &lt;title&gt;Quantum University WebTech Feed&lt;/title&gt;
+    &lt;link&gt;https://quantumuniversity.edu/webtech&lt;/link&gt;
+    &lt;description&gt;Latest syllabus updates and engineering notes&lt;/description&gt;
+    &lt;language&gt;en-us&lt;/language&gt;
+    &lt;pubDate&gt;Wed, 18 Nov 2026 09:00:00 GMT&lt;/pubDate&gt;
+
+    &lt;item&gt;
+      &lt;title&gt;Unit 4: Interactive and Social Web Notes Released&lt;/title&gt;
+      &lt;link&gt;https://quantumuniversity.edu/webtech/unit4&lt;/link&gt;
+      &lt;description&gt;Comprehensive study materials on Blogs, Wikis, and Rails.&lt;/description&gt;
+      &lt;guid isPermaLink="true"&gt;https://quantumuniversity.edu/webtech/unit4#overview&lt;/guid&gt;
+      &lt;pubDate&gt;Wed, 18 Nov 2026 08:30:00 GMT&lt;/pubDate&gt;
+      &lt;!-- Enclosure tag enabling podcasting --&gt;
+      &lt;enclosure url="https://quantumuniversity.edu/audio/unit4-lecture.mp3"
+                 length="15420300"
+                 type="audio/mpeg" /&gt;
+    &lt;/item&gt;
+  &lt;/channel&gt;
+&lt;/rss&gt;</code></pre>
+          </div>
+
+          <div class="wt-callout wt-callout-note">
+            <div class="wt-callout-icon">🎙️</div>
+            <div class="wt-callout-body">
+              <strong>The Secret Behind Podcasting: The Enclosure Tag</strong>
+              Podcasting does not use a proprietary streaming protocol. In 2000, Dave Winer added the <code>&lt;enclosure&gt;</code> tag to the RSS specification at the request of Adam Curry. By including the media URL, file size in octets, and MIME type, podcatchers (Apple Podcasts, Spotify) automatically download new audio files in the background!
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 6 -->
+      <section id="tech-syndication" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 4.6 • Syllabus Section</span>
+            <h2 class="wt-topic-title">The Technology Behind the Application – Syndication</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="tech-syndication">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="4" data-test-key="tech-syndication" data-test-title="The Technology Behind the Application – Syndication">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            <strong>Web Syndication</strong> is the process of making web feeds available from a source site to provide other people with a summary of the site's recently added content. Beyond basic RSS 2.0, the broader syndication architecture encompasses the <strong>Atom Syndication Format</strong>, <strong>OPML</strong> subscription lists, and real-time push protocols like <strong>WebSub</strong>.
+          </p>
+
+          <h4>1. Atom Syndication Format (IETF RFC 4287)</h4>
+          <p>
+            Published in 2005 by the IETF to resolve ambiguities and licensing disputes in RSS, <strong>Atom</strong> provides a cleaner XML namespace (<code>xmlns="http://www.w3.org/2005/Atom"</code>). Key structural differences from RSS:
+          </p>
+          <ul>
+            <li>Enclosing element is <code>&lt;feed&gt;</code> (instead of <code>&lt;rss&gt;&lt;channel&gt;</code>).</li>
+            <li>Entries are labeled <code>&lt;entry&gt;</code> (instead of <code>&lt;item&gt;</code>).</li>
+            <li>Mandatory globally unique IRI identifier: <code>&lt;id&gt;</code>.</li>
+            <li>Standardized ISO 8601 timestamps: <code>&lt;updated&gt;2026-11-18T09:00:00Z&lt;/updated&gt;</code>.</li>
+          </ul>
+
+          <h4>2. OPML (Outline Processor Markup Language)</h4>
+          <p>
+            An XML format used to export and import entire lists of RSS/Atom feed subscriptions between different feed reader applications (e.g., Feedly, Inoreader).
+          </p>
+
+          <h4>3. WebSub (PubSubHubbub) Real-Time Push Syndication</h4>
+          <p>
+            Traditional RSS requires clients to constantly poll servers (e.g., every 15 minutes) using HTTP Conditional GET (<code>If-Modified-Since</code> or <code>ETag</code> yielding <code>304 Not Modified</code>). <strong>WebSub</strong> (a W3C recommendation) replaces polling with a 3-party publish-subscribe architecture:
+          </p>
+          <ol>
+            <li>Publisher informs a <strong>Hub</strong> whenever new content is published.</li>
+            <li>The Hub immediately makes an HTTP POST webhook call to all subscribed readers, delivering new items with millisecond latency!</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Topic 7 -->
+      <section id="ruby-on-rails" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 4.7 • Syllabus Section</span>
+            <h2 class="wt-topic-title">Ruby on Rails</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="ruby-on-rails">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="4" data-test-key="ruby-on-rails" data-test-title="Ruby on Rails">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            <strong>Ruby on Rails</strong> (often simply <em>Rails</em>) is an open-source model-view-controller (MVC) web application framework written in the Ruby programming language. Created in 2004 by <strong>David Heinemeier Hansson (DHH)</strong>, Rails revolutionized modern web development by introducing opinionated software design philosophies.
+          </p>
+
+          <h4>1. Guiding Architectural Philosophies</h4>
+          <ul>
+            <li><strong>Convention over Configuration (CoC):</strong> Rails makes sensible assumptions about database schema naming, routing, and directory structures. If a model class is named <code>Student</code>, Rails automatically binds it to the database table <code>students</code> without requiring hundreds of lines of XML mapping files.</li>
+            <li><strong>Don't Repeat Yourself (DRY):</strong> Every piece of knowledge must have a single, unambiguous representation within a system.</li>
+          </ul>
+
+          <h4>2. The Rails MVC Architecture</h4>
+          <ul>
+            <li><strong>Model (Active Record):</strong> Represents business data and logic. Implements the Active Record design pattern where a database row is wrapped in a Ruby object with built-in validation, lifecycle callbacks, and relational associations (<code>has_many</code>, <code>belongs_to</code>).</li>
+            <li><strong>View (Action View):</strong> Renders HTML or JSON responses, typically authored using Embedded Ruby (<code>.html.erb</code>) templates.</li>
+            <li><strong>Controller (Action Controller):</strong> Accepts HTTP requests, interrogates parameters, coordinates with models to query/save data, and dispatches data to views.</li>
+          </ul>
+
+          <div class="wt-code-card">
+            <div class="wt-code-header">
+              <span>Rails Active Record Model &amp; Controller</span>
+              <span>Ruby on Rails</span>
+            </div>
+            <pre><code># app/models/student.rb
+class Student &lt; ApplicationRecord
+  has_many :test_scores, dependent: :destroy
+
+  validates :name, presence: true
+  validates :roll_no, presence: true, uniqueness: true
+end
+
+# app/controllers/students_controller.rb
+class StudentsController &lt; ApplicationController
+  def show
+    @student = Student.find(params[:id])
+    render json: @student, include: :test_scores
+  end
+
+  def create
+    @student = Student.new(student_params)
+    if @student.save
+      render json: @student, status: :created
+    else
+      render json: @student.errors, status: :unprocessable_entity
+    end
+  end
+
+  private
+  def student_params
+    params.require(:student).permit(:name, :roll_no, :semester)
+  end
+end</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 8 -->
+      <section id="open-apis" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 4.8 • Syllabus Section</span>
+            <h2 class="wt-topic-title">Open APIs</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="open-apis">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="4" data-test-key="open-apis" data-test-title="Open APIs">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            An <strong>Open API</strong> (also referred to as a Public API) is a publicly available application programming interface that provides developers with programmatic access to a proprietary software application or web service. Open APIs power modern mashups, third-party integrations, and ecosystem platforms (e.g., Stripe, Google Maps, OpenWeather, GitHub).
+          </p>
+
+          <h4>1. Architectural Pillars of Production Open APIs</h4>
+          <ul>
+            <li><strong>RESTful JSON Interfaces:</strong> Utilizes standard HTTP verbs (<code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code>), resource-oriented URIs, and JSON payloads.</li>
+            <li><strong>OpenAPI Specification (OAS / Swagger):</strong> A vendor-neutral, machine-readable description format (YAML or JSON) defining endpoints, parameters, request bodies, and response schemas.</li>
+            <li><strong>Authentication &amp; Authorization:</strong> Implemented via API Keys passed in headers, Bearer Tokens, or decentralized <strong>OAuth 2.0</strong> Authorization Frameworks.</li>
+            <li><strong>Rate Limiting:</strong> Enforces quota limits to prevent denial-of-service abuse and maintain infrastructure stability (e.g., 100 requests per minute). Exceeded quotas return HTTP status <code>429 Too Many Requests</code> with <code>Retry-After</code> response headers.</li>
+            <li><strong>Idempotency Keys:</strong> Using an <code>Idempotency-Key</code> header to ensure that network retries of financial or state-altering requests (like charging a credit card) do not execute twice.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Unit 4 Mixed Practice Test Section -->
+      <section id="unit4-mixed" class="wt-topic-section">
+        <div class="wt-topic-header-card" style="border-left-color: #6366f1; background: linear-gradient(135deg, #ffffff 0%, #f5f3ff 100%);">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num" style="color: #6366f1;">Comprehensive Review • Unit 4</span>
+            <h2 class="wt-topic-title">Unit 4 Mixed Practice Examination</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="unit4-mixed">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="4" data-test-key="unit4-mixed" data-test-title="Unit 4 Comprehensive Practice Test" style="background: linear-gradient(135deg, #6366f1 0%, #7c3aed 100%);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+              <span>Start Unit Practice Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            The <strong>Unit 4 Mixed Practice Examination</strong> comprehensively evaluates your understanding across social web platforms, wiki revision models, social graph algorithms, single-page app Ajax, RSS 2.0 enclosures, Atom feeds, Ruby on Rails MVC conventions, and REST Open API architectures.
+          </p>
+          <div class="wt-callout wt-callout-tip">
+            <div class="wt-callout-icon">🏆</div>
+            <div class="wt-callout-body">
+              <strong>Revision Tip:</strong> Complete each topic test (4.1 to 4.8) first before attempting this 20-question mixed exam!
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom Unit Navigation Pagination -->
+      <nav class="wt-unit-pagination">
+        <a href="unit3.html" class="wt-pagination-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <div class="wt-pagination-text">
+            <span class="wt-pagination-label">Previous Unit</span>
+            <span class="wt-pagination-title">Unit 3: Web Services &amp; Ajax</span>
+          </div>
+        </a>
+
+        <a href="unit5.html" class="wt-pagination-btn wt-pagination-next">
+          <div class="wt-pagination-text" style="text-align: right;">
+            <span class="wt-pagination-label">Next Unit</span>
+            <span class="wt-pagination-title">Unit 5: Semantic Web &amp; Web Intelligence</span>
+          </div>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </nav>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="wt-footer">
+    <div class="wt-container">
+      <div class="wt-footer-grid">
+        <div class="wt-footer-brand">
+          <h4>WebTech Learning Portal</h4>
+          <p>
+            An educational documentation and examination platform created for <strong>Web Technology (Course Code: CS35302)</strong>, Bachelor of Technology in Computer Science &amp; Engineering, Semester 5, at <strong>Quantum School of Technology, Quantum University</strong>.
+          </p>
+        </div>
+
+        <div class="wt-footer-col">
+          <h5>Course Navigation</h5>
+          <ul class="wt-footer-links">
+            <li><a href="unit1.html">Unit 1: Internet &amp; Web Foundations</a></li>
+            <li><a href="unit2.html">Unit 2: Client-Side Technologies &amp; XML</a></li>
+            <li><a href="unit3.html">Unit 3: Web Services &amp; Ajax</a></li>
+            <li><a href="unit4.html">Unit 4: Interactive and Social Web</a></li>
+            <li><a href="unit5.html">Unit 5: Semantic Web &amp; Web Intelligence</a></li>
+          </ul>
+        </div>
+
+        <div class="wt-footer-col">
+          <h5>Examination Tools</h5>
+          <ul class="wt-footer-links">
+            <li><a href="#" data-action="open-search">Search Syllabus Topics</a></li>
+            <li><a href="unit1.html#unit1-mixed">Unit 1 Mixed Practice Test</a></li>
+            <li><a href="unit2.html#unit2-mixed">Unit 2 Mixed Practice Test</a></li>
+            <li><a href="unit3.html#unit3-mixed">Unit 3 Mixed Practice Test</a></li>
+            <li><a href="unit4.html#unit4-mixed">Unit 4 Mixed Practice Test</a></li>
+            <li><a href="unit5.html#unit5-mixed">Unit 5 Mixed Practice Test</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="wt-footer-bottom">
+        <div>&copy; WebTech Learning. Course CS35302 – Quantum University. All rights reserved.</div>
+        <div>Built with HTML5, CSS3, &amp; Vanilla JavaScript. Zero heavy frameworks.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data/search-index.js"></script>
+  <script src="data/unit1-questions.js"></script>
+  <script src="data/unit2-questions.js"></script>
+  <script src="data/unit3-questions.js"></script>
+  <script src="data/unit4-questions.js"></script>
+  <script src="data/unit5-questions.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/test-engine.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/navigation.js"></script>
+  <script>
+    function updateUnit4Sidebar() {
+      if (!window.WebTechStorage) return;
+      var stats = window.WebTechStorage.getUnitStats(4);
+      var fill = document.getElementById('wt-sidebar-unit4-fill');
+      var count = document.getElementById('wt-sidebar-unit4-count');
+      if (fill && count) {
+        fill.style.width = stats.percentage + '%';
+        count.textContent = stats.completedTopics + '/' + stats.totalTopics;
+      }
+      var topics = [
+        'blogs', 'wikis', 'social-networking', 'tech-ajax-apps',
+        'tech-rss', 'tech-syndication', 'ruby-on-rails', 'open-apis'
+      ];
+      topics.forEach(function(key) {
+        var el = document.querySelector('.wt-toc-check[data-toc-key="' + key + '"]');
+        if (el) {
+          if (window.WebTechStorage.isCompleted(key)) {
+            el.classList.add('completed');
+          } else {
+            el.classList.remove('completed');
+          }
+        }
+      });
+    }
+    document.addEventListener('DOMContentLoaded', updateUnit4Sidebar);
+    window.addEventListener('webtech:progress_updated', updateUnit4Sidebar);
+  </script>
+</body>
+</html>

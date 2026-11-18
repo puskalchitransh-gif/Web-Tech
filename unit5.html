@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit 5: Semantic Web &amp; Web Intelligence – WebTech Learning (CS35302)</title>
+  <meta name="description" content="Complete documentation and topic-wise MCQ examination for Unit 5: Semantic Web & Web Intelligence. Course CS35302, Quantum University." />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/documentation.css" />
+  <link rel="stylesheet" href="css/test-system.css" />
+</head>
+<body>
+  <!-- Header / Navigation Bar -->
+  <header class="wt-navbar">
+    <div class="wt-container wt-nav-inner">
+      <div class="wt-nav-left">
+        <button class="wt-mobile-toggle" id="wt-mobile-menu-btn" aria-label="Toggle Syllabus Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <a href="index.html" class="wt-brand">
+          <div class="wt-brand-logo">WT</div>
+          <div class="wt-brand-text">
+            <span class="wt-site-title">WebTech Learning</span>
+            <span class="wt-course-sub">CS35302 • B.Tech CSE Sem 5</span>
+          </div>
+        </a>
+      </div>
+
+      <nav>
+        <ul class="wt-nav-links">
+          <li><a href="index.html" class="wt-nav-link">Home</a></li>
+          <li><a href="unit1.html" class="wt-nav-link">Unit 1</a></li>
+          <li><a href="unit2.html" class="wt-nav-link">Unit 2</a></li>
+          <li><a href="unit3.html" class="wt-nav-link">Unit 3</a></li>
+          <li><a href="unit4.html" class="wt-nav-link">Unit 4</a></li>
+          <li><a href="unit5.html" class="wt-nav-link active">Unit 5</a></li>
+        </ul>
+      </nav>
+
+      <div class="wt-nav-right">
+        <button class="wt-search-trigger" data-action="open-search" title="Search Syllabus (Press / or Ctrl+K)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <span>Search syllabus...</span>
+          <kbd class="wt-search-shortcut">/</kbd>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wt-sidebar-overlay" id="wt-sidebar-overlay"></div>
+
+  <!-- Documentation Layout Grid -->
+  <div class="wt-container wt-doc-layout">
+    <!-- Sticky Sidebar Table of Contents -->
+    <aside class="wt-sidebar" id="wt-sidebar">
+      <div class="wt-sidebar-header">
+        <div class="wt-sidebar-unit-title">Unit 5: Semantic Web &amp; Intelligence</div>
+        <div class="wt-sidebar-progress-wrap">
+          <span>Topics Complete:</span>
+          <div class="wt-sidebar-progress-bar">
+            <div class="wt-sidebar-progress-fill" id="wt-sidebar-unit5-fill" style="width: 0%;"></div>
+          </div>
+          <span id="wt-sidebar-unit5-count">0/8</span>
+        </div>
+      </div>
+
+      <nav class="wt-sidebar-nav">
+        <div class="wt-toc-group-label">Syllabus Topics (8)</div>
+        <ul class="wt-toc-list">
+          <li class="wt-toc-item"><a href="#semantic-web" class="wt-toc-link"><span>1. Semantic Web</span><span class="wt-toc-check" data-toc-key="semantic-web">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#widgets" class="wt-toc-link"><span>2. Web Widgets</span><span class="wt-toc-check" data-toc-key="widgets">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#mashups" class="wt-toc-link"><span>3. Drag &amp; Drop Mashups</span><span class="wt-toc-check" data-toc-key="mashups">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#rdf" class="wt-toc-link"><span>4. Tech Behind Apps: RDF</span><span class="wt-toc-check" data-toc-key="rdf">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#web-info-systems" class="wt-toc-link"><span>5. Web Information Systems</span><span class="wt-toc-check" data-toc-key="web-info-systems">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#search-engines" class="wt-toc-link"><span>6. Tech Behind Apps: Search Engines</span><span class="wt-toc-check" data-toc-key="search-engines">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#recommender-systems" class="wt-toc-link"><span>7. Recommender Systems</span><span class="wt-toc-check" data-toc-key="recommender-systems">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#web-mining" class="wt-toc-link"><span>8. Web Mining Techniques</span><span class="wt-toc-check" data-toc-key="web-mining">✓</span></a></li>
+        </ul>
+
+        <div class="wt-sidebar-test-card">
+          <h6>Unit Practice Exam</h6>
+          <p>Test your comprehensive mastery across all 8 topics of Unit 5.</p>
+          <a href="#unit5-mixed" class="wt-btn wt-btn-sm wt-btn-accent" style="width: 100%; justify-content: center;">
+            View Practice Exam
+          </a>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="wt-doc-content">
+      <!-- Unit Banner -->
+      <section class="wt-unit-overview-banner">
+        <span class="wt-unit-tag">Course CS35302 • Semester 5</span>
+        <h1 class="wt-unit-heading">Unit 5: Semantic Web &amp; Web Intelligence</h1>
+        <p class="wt-unit-lead">
+          Explore the vanguard of web intelligence and knowledge engineering. This unit covers the Semantic Web vision, W3C Web Components and encapsulated widgets, hybrid mashup architectures, the Resource Description Framework (RDF) and SPARQL, enterprise multi-tier web information systems, search engine indexing and PageRank algorithms, personalized recommender systems, and web data mining.
+        </p>
+        <div class="wt-unit-meta-bar">
+          <div><strong>Syllabus Code:</strong> CS35302 Unit 5</div>
+          <div><strong>Topics:</strong> 8 Detailed Sections</div>
+          <div><strong>Topic Tests:</strong> 8 Separate Tests (20 MCQs each)</div>
+          <div><strong>Mixed Exam:</strong> 20 Questions</div>
+        </div>
+      </section>
+
+      <!-- Topic 1 -->
+      <section id="semantic-web" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 5.1 • Syllabus Section</span>
+            <h2 class="wt-topic-title">Semantic Web</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="semantic-web">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="5" data-test-key="semantic-web" data-test-title="Semantic Web">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            The vision of the <strong>Semantic Web</strong> was articulated in a famous 2001 <em>Scientific American</em> article by <strong>Tim Berners-Lee, James Hendler, and Ora Lassila</strong>. Traditional web pages are designed exclusively for human visual consumption (HTML markup tells the browser how to style text, but lacks semantic meaning). The Semantic Web aims to make web data <strong>machine-understandable</strong>, enabling autonomous software agents to perform sophisticated searching, reasoning, and automated tasks on behalf of users.
+          </p>
+
+          <h4>1. The Semantic Web Layer Cake</h4>
+          <p>
+            The architecture of the Semantic Web is visualized as a hierarchical stack of standards:
+          </p>
+          <ol>
+            <li><strong>URI / IRI &amp; Unicode:</strong> Universal identification of entities across the web and internationalized character support.</li>
+            <li><strong>XML &amp; XML Schema:</strong> Standardized syntax and data type definitions.</li>
+            <li><strong>RDF (Resource Description Framework):</strong> Graph data model of Subject-Predicate-Object statements representing facts.</li>
+            <li><strong>RDF Schema (RDFS) &amp; OWL (Web Ontology Language):</strong> Formal representation of concepts, taxonomic class hierarchies, and logical relationships between entities.</li>
+            <li><strong>SPARQL:</strong> Standard query language to retrieve data across distributed RDF triplestores.</li>
+            <li><strong>Logic &amp; Rule Engine (RIF / SWRL):</strong> Inference rules allowing machines to deduce new unstated facts from existing knowledge.</li>
+            <li><strong>Proof &amp; Trust:</strong> Cryptographic verification and reputation mechanisms establishing data provenance.</li>
+          </ol>
+
+          <h4>2. The Four Principles of Linked Data</h4>
+          <p>
+            In 2006, Tim Berners-Lee outlined the four rules for publishing Linked Data on the Web:
+          </p>
+          <ul>
+            <li>Use URIs as names for things.</li>
+            <li>Use HTTP URIs so that people and software can look up those names (dereferencing).</li>
+            <li>When someone looks up a URI, provide useful information using standards (RDF, SPARQL).</li>
+            <li>Include links to other URIs so that agents can discover more related entities.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Topic 2 -->
+      <section id="widgets" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 5.2 • Syllabus Section</span>
+            <h2 class="wt-topic-title">Widgets</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="widgets">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="5" data-test-key="widgets" data-test-title="Widgets">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            A <strong>Web Widget</strong> is a self-contained, portable, interactive client-side visual application component that can be embedded into any third-party web page without interfering with the hosting document (e.g., weather forecasts, stock tickers, interactive calculators, chat bubbles).
+          </p>
+
+          <h4>1. Modern Architecture: W3C Web Components</h4>
+          <p>
+            Historically, widgets were implemented via fragile <code>&lt;iframe&gt;</code> tags or global JavaScript script tags that polluted the global scope and suffered CSS style bleeding. Today, web widgets are built natively using the <strong>W3C Web Components</strong> suite:
+          </p>
+          <ul>
+            <li><strong>Custom Elements:</strong> Standard APIs to define custom HTML tags with lifecycle callbacks (e.g., <code>&lt;course-badge&gt;</code>) using <code>customElements.define()</code>.</li>
+            <li><strong>Shadow DOM:</strong> Provides true encapsulation for markup and styles. Styles defined inside the Shadow Root cannot bleed out into the host page, and host page styles cannot unintentionally distort the widget.</li>
+            <li><strong>HTML Templates (<code>&lt;template&gt;</code> &amp; <code>&lt;slot&gt;</code>):</strong> Declares inert markup fragments that are not rendered until instantiated at runtime, with slots allowing consumers to inject custom text into predetermined positions.</li>
+          </ul>
+
+          <div class="wt-code-card">
+            <div class="wt-code-header">
+              <span>Encapsulated Web Component Widget with Shadow DOM</span>
+              <span>JavaScript</span>
+            </div>
+            <pre><code>class CourseBadge extends HTMLElement {
+  constructor() {
+    super();
+    // Attach encapsulated Shadow DOM
+    const shadow = this.attachShadow({ mode: 'open' });
+
+    shadow.innerHTML = `
+      &lt;style&gt;
+        :host {
+          display: inline-block;
+          font-family: system-ui, sans-serif;
+        }
+        .badge {
+          background: #7c3aed;
+          color: white;
+          padding: 0.35rem 0.75rem;
+          border-radius: 9999px;
+          font-size: 0.8125rem;
+          font-weight: 600;
+        }
+      &lt;/style&gt;
+      &lt;span class="badge"&gt;
+        &lt;slot&gt;CS35302 – Web Technology&lt;/slot&gt;
+      &lt;/span&gt;
+    `;
+  }
+}
+
+customElements.define('course-badge', CourseBadge);</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 3 -->
+      <section id="mashups" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 5.3 • Syllabus Section</span>
+            <h2 class="wt-topic-title">Drag &amp; Drop Mashups</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="mashups">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="5" data-test-key="mashups" data-test-title="Drag &amp; Drop Mashups">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            A <strong>Web Mashup</strong> is a composite web application that aggregates data, functionality, or multimedia from two or more independent external sources to create an entirely new, unified service. The historical breakthrough was <strong>HousingMaps</strong> (created in 2005 by Paul Rademacher), which merged Craigslist apartment listings with Google Maps to show rental locations visually on an interactive map.
+          </p>
+
+          <h4>1. Client-Side vs Server-Side Mashups</h4>
+          <ul>
+            <li><strong>Client-Side Mashups:</strong> The user's browser makes asynchronous REST/Ajax calls directly to multiple external APIs (e.g., OpenWeatherMap and Mapbox) and stitches the responses together dynamically using JavaScript.</li>
+            <li><strong>Server-Side Mashups:</strong> A backend server queries external APIs, performs data cleaning, schema reconciliation, and caching, and sends a single consolidated response payload down to the client. This avoids client-side CORS issues and protects private API secret keys.</li>
+          </ul>
+
+          <h4>2. Visual Drag &amp; Drop Workflow Platforms</h4>
+          <p>
+            Tools like <strong>Yahoo! Pipes</strong> (in the 2000s) pioneered visual drag-and-drop mashups, enabling users without coding skills to connect data sources using graphical modules (Fetch, Filter, Sort, Merge). Today, visual workflow platforms like <strong>Zapier</strong>, <strong>Make</strong>, and <strong>n8n</strong> carry forward this paradigm.
+          </p>
+
+          <h4>3. HTML5 Native Drag and Drop API</h4>
+          <p>
+            Modern interactive mashup builders utilize HTML5 Drag and Drop:
+          </p>
+          <div class="wt-code-card">
+            <div class="wt-code-header">
+              <span>HTML5 Native Drag and Drop Implementation</span>
+              <span>JavaScript</span>
+            </div>
+            <pre><code>// 1. Draggable Widget Source
+const widget = document.getElementById('map-widget-source');
+widget.setAttribute('draggable', 'true');
+
+widget.addEventListener('dragstart', (e) => {
+  e.dataTransfer.setData('text/plain', 'widget:google-maps');
+  e.dataTransfer.effectAllowed = 'copy';
+});
+
+// 2. Drop Target Canvas
+const canvas = document.getElementById('mashup-canvas');
+
+canvas.addEventListener('dragover', (e) => {
+  e.preventDefault(); // Mandatory to allow drop!
+  e.dataTransfer.dropEffect = 'copy';
+});
+
+canvas.addEventListener('drop', (e) => {
+  e.preventDefault();
+  const widgetType = e.dataTransfer.getData('text/plain');
+  console.log(`Instantiating mashup component: ${widgetType}`);
+  instantiateComponent(widgetType, e.clientX, e.clientY);
+});</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 4 -->
+      <section id="rdf" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 5.4 • Syllabus Section</span>
+            <h2 class="wt-topic-title">The Technology Behind These Applications – RDF</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="rdf">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="5" data-test-key="rdf" data-test-title="The Technology Behind These Applications – RDF">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            The <strong>Resource Description Framework (RDF)</strong> is a W3C standard data model for representing information about web resources. In RDF, knowledge is structured not as relational tables or XML document hierarchies, but as a <strong>Directed, Labeled Graph</strong> of atomic assertions known as <strong>Triples</strong>.
+          </p>
+
+          <h4>1. The RDF Statement Triple: Subject &ndash; Predicate &ndash; Object</h4>
+          <ul>
+            <li><strong>Subject:</strong> The resource being described. Identified by a URI or an anonymous blank node.</li>
+            <li><strong>Predicate:</strong> The property, characteristic, or relationship. Always identified by a URI.</li>
+            <li><strong>Object:</strong> The property value or target entity. Can be another URI (linking to another entity in the knowledge graph) or a Literal (typed string, integer, date).</li>
+          </ul>
+
+          <div class="wt-code-card">
+            <div class="wt-code-header">
+              <span>RDF Turtle (Terse RDF Triple Language) Syntax</span>
+              <span>Turtle</span>
+            </div>
+            <pre><code>@prefix ex: &lt;http://quantumuniversity.edu/courses/&gt; .
+@prefix dc: &lt;http://purl.org/dc/elements/1.1/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# Subject                              Predicate          Object
+ex:CS35302                             dc:title           "Web Technology"^^xsd:string ;
+                                       dc:creator         "Dr. Sharma" ;
+                                       ex:semester        "5"^^xsd:positiveInteger ;
+                                       ex:taughtAt        &lt;http://dbpedia.org/resource/Quantum_University&gt; .</code></pre>
+          </div>
+
+          <h4>2. SPARQL (Protocol and RDF Query Language)</h4>
+          <p>
+            SPARQL is the standard SQL-like query language for querying graph patterns across RDF triplestores:
+          </p>
+          <div class="wt-code-card">
+            <div class="wt-code-header">
+              <span>SPARQL Graph Query Example</span>
+              <span>SPARQL</span>
+            </div>
+            <pre><code>PREFIX dc: &lt;http://purl.org/dc/elements/1.1/&gt;
+PREFIX ex: &lt;http://quantumuniversity.edu/courses/&gt;
+
+SELECT ?courseTitle ?semester
+WHERE {
+  ?course dc:title ?courseTitle .
+  ?course ex:semester ?semester .
+  FILTER(?semester &gt;= 5)
+}</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 5 -->
+      <section id="web-info-systems" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 5.5 • Syllabus Section</span>
+            <h2 class="wt-topic-title">Web-Based Information Systems</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="web-info-systems">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="5" data-test-key="web-info-systems" data-test-title="Web-Based Information Systems">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            A <strong>Web-Based Information System (WBIS)</strong> is an enterprise software system that harnesses Internet technologies and protocols to collect, store, process, and distribute business data to support decision-making, transactional processing, and operational control.
+          </p>
+
+          <h4>1. The Three-Tier Enterprise Architecture</h4>
+          <div class="wt-table-wrap">
+            <table class="wt-table">
+              <thead>
+                <tr>
+                  <th>Tier Layer</th>
+                  <th>Core Responsibilities</th>
+                  <th>Typical Technologies</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Presentation Tier (Client Layer)</strong></td>
+                  <td>User interface, collecting inputs, client-side validation, rendering responses.</td>
+                  <td>Web Browsers, HTML5, CSS3, JavaScript, React, Mobile Apps.</td>
+                </tr>
+                <tr>
+                  <td><strong>Application / Logic Tier (Middle Layer)</strong></td>
+                  <td>Business rules execution, transaction coordination, security enforcement, orchestrating workflows.</td>
+                  <td>Node.js, Java Spring Boot, Python Django/FastAPI, Ruby on Rails, C# .NET Core.</td>
+                </tr>
+                <tr>
+                  <td><strong>Data Tier (Persistence Layer)</strong></td>
+                  <td>Persistent storage, ACID transactions, data retrieval, indexing, backups.</td>
+                  <td>PostgreSQL, MySQL, Oracle, MongoDB, Redis, Cassandra.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>2. Scalability Engineering and CAP Theorem</h4>
+          <ul>
+            <li><strong>Horizontal Scaling:</strong> Adding more web server nodes behind an intelligent Load Balancer (NGINX, HAProxy, AWS ALB) rather than buying a bigger machine (Vertical Scaling).</li>
+            <li><strong>Connection Pooling:</strong> Maintaining a cache of pre-established database connections to eliminate the expensive latency of handshakes for every HTTP request.</li>
+            <li><strong>Brewer's CAP Theorem:</strong> States that a distributed data store can simultaneously provide at most two of the following three guarantees: <strong>Consistency</strong> (every read receives the most recent write), <strong>Availability</strong> (every request receives a non-error response), and <strong>Partition Tolerance</strong> (system continues operating despite network message drops). In real-world networks where partitions inevitably occur, systems must choose between CP and AP.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Topic 6 -->
+      <section id="search-engines" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 5.6 • Syllabus Section</span>
+            <h2 class="wt-topic-title">The Technology Behind These Applications – Search Engines</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="search-engines">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="5" data-test-key="search-engines" data-test-title="The Technology Behind These Applications – Search Engines">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            A <strong>Web Search Engine</strong> is an information retrieval system designed to discover, index, and rank web resources in response to user queries. The operational pipeline consists of three sequential phases: <strong>Crawling</strong>, <strong>Indexing</strong>, and <strong>Ranking</strong>.
+          </p>
+
+          <h4>1. Crawling and Indexing</h4>
+          <ul>
+            <li><strong>Web Crawling:</strong> Automated bots (such as Googlebot) download pages, parse hyperlinks, and add new URLs to a priority frontier queue. Crawlers adhere to site crawling permissions via <code>robots.txt</code> and XML Sitemaps.</li>
+            <li><strong>Text Normalization:</strong> Raw HTML is stripped of tags, lowercased, tokenized into words, stripped of stop words (<em>the</em>, <em>is</em>, <em>at</em>), and reduced to word roots via linguistic stemming (e.g., Porter Stemmer).</li>
+            <li><strong>Inverted Index:</strong> The foundational data structure of search engines. Instead of mapping a Document &rarr; Words, an Inverted Index maps each <strong>Term &rarr; List of Document IDs</strong> where that term appears, along with positional offsets and frequencies.</li>
+          </ul>
+
+          <h4>2. Ranking: TF-IDF and Google PageRank</h4>
+          <p>
+            Relevance scoring combines textual relevance with link authority:
+          </p>
+          <ul>
+            <li><strong>TF-IDF (Term Frequency - Inverse Document Frequency):</strong> Evaluates how important a word is to a document in a collection:
+              \[
+              	ext{TF-IDF}(t, d, D) = 	ext{TF}(t, d) 	imes \log\left(rac{|D|}{|\{d \in D : t \in d\}|}ight)
+              \]
+              Words appearing frequently in one document but rarely across the entire corpus receive the highest scores.
+            </li>
+            <li><strong>PageRank Algorithm (Page and Brin, 1998):</strong> Interprets a hyperlink from page \(A\) to page \(B\) as a vote of confidence. The PageRank \(PR(A)\) is formulated under the <em>Random Surfer Model</em>:
+              \[
+              PR(A) = rac{1 - d}{N} + d \sum_{i \in M(A)} rac{PR(i)}{L(i)}
+              \]
+              Where \(d\) is the damping factor (typically \(0.85\)), \(N\) is total pages, \(M(A)\) is the set of pages linking to \(A\), and \(L(i)\) is the outbound link count of page \(i\).
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Topic 7 -->
+      <section id="recommender-systems" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 5.7 • Syllabus Section</span>
+            <h2 class="wt-topic-title">The Technology Behind These Applications – Recommender Systems</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="recommender-systems">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="5" data-test-key="recommender-systems" data-test-title="The Technology Behind These Applications – Recommender Systems">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            <strong>Recommender Systems</strong> are algorithmic information filtering engines that predict the rating or preference a user would give to an item, presenting personalized suggestions across vast catalogs (Amazon products, Netflix movies, Spotify tracks).
+          </p>
+
+          <h4>1. Primary Recommender Paradigms</h4>
+          <ul>
+            <li><strong>Collaborative Filtering (CF):</strong> Generates recommendations based solely on historical interaction patterns across users. Does not require understanding item contents.
+              <ul>
+                <li><em>User-Based CF:</em> Finds "peers" with similar past rating histories and recommends items they enjoyed.</li>
+                <li><em>Item-Based CF:</em> Calculates similarity between items based on how they were co-rated by users (computationally more stable than user-based CF).</li>
+              </ul>
+            </li>
+            <li><strong>Content-Based Filtering:</strong> Recommends items that share structural or textual attributes (genres, directors, keywords) with items the user has previously rated highly. Uses vector space cosine similarity between user profile vectors and item attribute vectors.</li>
+            <li><strong>Hybrid Recommenders:</strong> Combines collaborative and content-based approaches to offset the weaknesses of each (e.g., Netflix blending collaborative viewing patterns with genre tags).</li>
+          </ul>
+
+          <h4>2. The Cold Start Problem and Similarity Metrics</h4>
+          <p>
+            The <strong>Cold Start Problem</strong> occurs when new items have zero ratings or new users have zero interaction history, preventing collaborative filtering from making predictions. Content-based heuristics are used as fallback.
+          </p>
+          <p>
+            Similarity between user rating vectors \(ec{u}\) and \(ec{v}\) is measured using <strong>Cosine Similarity</strong>:
+            \[
+            	ext{Cosine}(ec{u}, ec{v}) = rac{ec{u} \cdot ec{v}}{\|ec{u}\| \|ec{v}\|} = rac{\sum_{i} u_i v_i}{\sqrt{\sum_{i} u_i^2} \sqrt{\sum_{i} v_i^2}}
+            \]
+          </p>
+        </div>
+      </section>
+
+      <!-- Topic 8 -->
+      <section id="web-mining" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 5.8 • Syllabus Section</span>
+            <h2 class="wt-topic-title">Web Mining</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="web-mining">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="5" data-test-key="web-mining" data-test-title="Web Mining">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            <strong>Web Mining</strong> is the application of data mining, machine learning, and statistical analysis techniques to automatically discover patterns, extract actionable knowledge, and uncover insights from World Wide Web resources and user interactions.
+          </p>
+
+          <h4>1. The Three Primary Branches of Web Mining</h4>
+          <div class="wt-table-wrap">
+            <table class="wt-table">
+              <thead>
+                <tr>
+                  <th>Web Mining Category</th>
+                  <th>Source Data Inspected</th>
+                  <th>Key Algorithms &amp; Practical Applications</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Web Content Mining</strong></td>
+                  <td>Unstructured and semi-structured content: HTML text, metadata, images, and audio.</td>
+                  <td>Natural Language Processing (NLP), Sentiment Analysis of customer reviews, text classification, and Named Entity Recognition (NER).</td>
+                </tr>
+                <tr>
+                  <td><strong>Web Structure Mining</strong></td>
+                  <td>The hyperlink topology graph connecting web pages, documents, and social accounts.</td>
+                  <td><strong>Kleinberg's HITS Algorithm</strong> (Hubs and Authorities), Google PageRank, community detection, identifying authoritative nodes.</td>
+                </tr>
+                <tr>
+                  <td><strong>Web Usage Mining</strong></td>
+                  <td>Web server access logs, clickstream tracking data, referrer headers, and user cookies.</td>
+                  <td><strong>Sessionization</strong> (identifying user sessions from log streams), path completion analysis, shopping cart abandonment modeling, e-commerce conversion funnel optimization.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="wt-callout wt-callout-note">
+            <div class="wt-callout-icon">🔍</div>
+            <div class="wt-callout-body">
+              <strong>Kleinberg's HITS Algorithm (Hubs &amp; Authorities)</strong>
+              Developed by Jon Kleinberg, HITS identifies two types of important pages:
+              <ul>
+                <li><strong>Authorities:</strong> Web pages containing prominent, trusted content on a topic (pointed to by many hubs).</li>
+                <li><strong>Hubs:</strong> Web pages containing curated links pointing to multiple authoritative resources on a topic. Authorities and hubs exhibit a mutually reinforcing relationship!</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Unit 5 Mixed Practice Test Section -->
+      <section id="unit5-mixed" class="wt-topic-section">
+        <div class="wt-topic-header-card" style="border-left-color: #6366f1; background: linear-gradient(135deg, #ffffff 0%, #f5f3ff 100%);">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num" style="color: #6366f1;">Comprehensive Review • Unit 5</span>
+            <h2 class="wt-topic-title">Unit 5 Mixed Practice Examination</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="unit5-mixed">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="5" data-test-key="unit5-mixed" data-test-title="Unit 5 Comprehensive Practice Test" style="background: linear-gradient(135deg, #6366f1 0%, #7c3aed 100%);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+              <span>Start Unit Practice Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            The <strong>Unit 5 Mixed Practice Examination</strong> evaluates your holistic mastery across all 8 syllabus topics: Semantic Web layers, Web Components, drag-and-drop mashup APIs, RDF triples and SPARQL, enterprise information systems, PageRank math, collaborative vs content recommenders, and web mining branches.
+          </p>
+          <div class="wt-callout wt-callout-tip">
+            <div class="wt-callout-icon">🏆</div>
+            <div class="wt-callout-body">
+              <strong>Course Completion:</strong>
+              Completing all tests across all five units prepares you for full mastery of CS35302 Web Technology at Quantum University!
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom Unit Navigation Pagination -->
+      <nav class="wt-unit-pagination">
+        <a href="unit4.html" class="wt-pagination-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <div class="wt-pagination-text">
+            <span class="wt-pagination-label">Previous Unit</span>
+            <span class="wt-pagination-title">Unit 4: Interactive and Social Web</span>
+          </div>
+        </a>
+
+        <a href="index.html" class="wt-pagination-btn wt-pagination-next">
+          <div class="wt-pagination-text" style="text-align: right;">
+            <span class="wt-pagination-label">Back to</span>
+            <span class="wt-pagination-title">Course Homepage</span>
+          </div>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </nav>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="wt-footer">
+    <div class="wt-container">
+      <div class="wt-footer-grid">
+        <div class="wt-footer-brand">
+          <h4>WebTech Learning Portal</h4>
+          <p>
+            An educational documentation and examination platform created for <strong>Web Technology (Course Code: CS35302)</strong>, Bachelor of Technology in Computer Science &amp; Engineering, Semester 5, at <strong>Quantum School of Technology, Quantum University</strong>.
+          </p>
+        </div>
+
+        <div class="wt-footer-col">
+          <h5>Course Navigation</h5>
+          <ul class="wt-footer-links">
+            <li><a href="unit1.html">Unit 1: Internet &amp; Web Foundations</a></li>
+            <li><a href="unit2.html">Unit 2: Client-Side Technologies &amp; XML</a></li>
+            <li><a href="unit3.html">Unit 3: Web Services &amp; Ajax</a></li>
+            <li><a href="unit4.html">Unit 4: Interactive and Social Web</a></li>
+            <li><a href="unit5.html">Unit 5: Semantic Web &amp; Web Intelligence</a></li>
+          </ul>
+        </div>
+
+        <div class="wt-footer-col">
+          <h5>Examination Tools</h5>
+          <ul class="wt-footer-links">
+            <li><a href="#" data-action="open-search">Search Syllabus Topics</a></li>
+            <li><a href="unit1.html#unit1-mixed">Unit 1 Mixed Practice Test</a></li>
+            <li><a href="unit2.html#unit2-mixed">Unit 2 Mixed Practice Test</a></li>
+            <li><a href="unit3.html#unit3-mixed">Unit 3 Mixed Practice Test</a></li>
+            <li><a href="unit4.html#unit4-mixed">Unit 4 Mixed Practice Test</a></li>
+            <li><a href="unit5.html#unit5-mixed">Unit 5 Mixed Practice Test</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="wt-footer-bottom">
+        <div>&copy; WebTech Learning. Course CS35302 – Quantum University. All rights reserved.</div>
+        <div>Built with HTML5, CSS3, &amp; Vanilla JavaScript. Zero heavy frameworks.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data/search-index.js"></script>
+  <script src="data/unit1-questions.js"></script>
+  <script src="data/unit2-questions.js"></script>
+  <script src="data/unit3-questions.js"></script>
+  <script src="data/unit4-questions.js"></script>
+  <script src="data/unit5-questions.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/test-engine.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/navigation.js"></script>
+  <script>
+    function updateUnit5Sidebar() {
+      if (!window.WebTechStorage) return;
+      var stats = window.WebTechStorage.getUnitStats(5);
+      var fill = document.getElementById('wt-sidebar-unit5-fill');
+      var count = document.getElementById('wt-sidebar-unit5-count');
+      if (fill && count) {
+        fill.style.width = stats.percentage + '%';
+        count.textContent = stats.completedTopics + '/' + stats.totalTopics;
+      }
+      var topics = [
+        'semantic-web', 'widgets', 'mashups', 'rdf',
+        'web-info-systems', 'search-engines', 'recommender-systems', 'web-mining'
+      ];
+      topics.forEach(function(key) {
+        var el = document.querySelector('.wt-toc-check[data-toc-key="' + key + '"]');
+        if (el) {
+          if (window.WebTechStorage.isCompleted(key)) {
+            el.classList.add('completed');
+          } else {
+            el.classList.remove('completed');
+          }
+        }
+      });
+    }
+    document.addEventListener('DOMContentLoaded', updateUnit5Sidebar);
+    window.addEventListener('webtech:progress_updated', updateUnit5Sidebar);
+  </script>
+</body>
+</html>

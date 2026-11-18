@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit 1: Internet &amp; Web Foundations – WebTech Learning (CS35302)</title>
+  <meta name="description" content="Complete documentation and topic-wise MCQ examination for Unit 1: Internet and Web Foundations. Course CS35302, Quantum University." />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/documentation.css" />
+  <link rel="stylesheet" href="css/test-system.css" />
+</head>
+<body>
+  <!-- Header / Navigation Bar -->
+  <header class="wt-navbar">
+    <div class="wt-container wt-nav-inner">
+      <div class="wt-nav-left">
+        <button class="wt-mobile-toggle" id="wt-mobile-menu-btn" aria-label="Toggle Syllabus Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <a href="index.html" class="wt-brand">
+          <div class="wt-brand-logo">WT</div>
+          <div class="wt-brand-text">
+            <span class="wt-site-title">WebTech Learning</span>
+            <span class="wt-course-sub">CS35302 • B.Tech CSE Sem 5</span>
+          </div>
+        </a>
+      </div>
+
+      <nav>
+        <ul class="wt-nav-links">
+          <li><a href="index.html" class="wt-nav-link">Home</a></li>
+          <li><a href="unit1.html" class="wt-nav-link active">Unit 1</a></li>
+          <li><a href="unit2.html" class="wt-nav-link">Unit 2</a></li>
+          <li><a href="unit3.html" class="wt-nav-link">Unit 3</a></li>
+          <li><a href="unit4.html" class="wt-nav-link">Unit 4</a></li>
+          <li><a href="unit5.html" class="wt-nav-link">Unit 5</a></li>
+        </ul>
+      </nav>
+
+      <div class="wt-nav-right">
+        <button class="wt-search-trigger" data-action="open-search" title="Search Syllabus (Press / or Ctrl+K)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <span>Search syllabus...</span>
+          <kbd class="wt-search-shortcut">/</kbd>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wt-sidebar-overlay" id="wt-sidebar-overlay"></div>
+
+  <!-- Documentation Layout Grid -->
+  <div class="wt-container wt-doc-layout">
+    <!-- Sticky Sidebar Table of Contents -->
+    <aside class="wt-sidebar" id="wt-sidebar">
+      <div class="wt-sidebar-header">
+        <div class="wt-sidebar-unit-title">Unit 1: Internet &amp; Web Foundations</div>
+        <div class="wt-sidebar-progress-wrap">
+          <span>Topics Complete:</span>
+          <div class="wt-sidebar-progress-bar">
+            <div class="wt-sidebar-progress-fill" id="wt-sidebar-unit1-fill" style="width: 0%;"></div>
+          </div>
+          <span id="wt-sidebar-unit1-count">0/10</span>
+        </div>
+      </div>
+
+      <nav class="wt-sidebar-nav">
+        <div class="wt-toc-group-label">Syllabus Topics (10)</div>
+        <ul class="wt-toc-list">
+          <li class="wt-toc-item"><a href="#history-internet" class="wt-toc-link"><span>1. History of the Internet</span><span class="wt-toc-check" data-toc-key="history-internet">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#www-html" class="wt-toc-link"><span>2. World Wide Web and HTML</span><span class="wt-toc-check" data-toc-key="www-html">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#http" class="wt-toc-link"><span>3. Protocols – HTTP</span><span class="wt-toc-check" data-toc-key="http">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#smtp" class="wt-toc-link"><span>4. Protocols – SMTP</span><span class="wt-toc-check" data-toc-key="smtp">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#pop3" class="wt-toc-link"><span>5. Protocols – POP3</span><span class="wt-toc-check" data-toc-key="pop3">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#mime" class="wt-toc-link"><span>6. Protocols – MIME</span><span class="wt-toc-check" data-toc-key="mime">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#imap" class="wt-toc-link"><span>7. Protocols – IMAP</span><span class="wt-toc-check" data-toc-key="imap">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#dns" class="wt-toc-link"><span>8. Domain Name Server (DNS)</span><span class="wt-toc-check" data-toc-key="dns">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#web-browsers" class="wt-toc-link"><span>9. Web Browsers</span><span class="wt-toc-check" data-toc-key="web-browsers">✓</span></a></li>
+          <li class="wt-toc-item"><a href="#web-servers" class="wt-toc-link"><span>10. Web Servers</span><span class="wt-toc-check" data-toc-key="web-servers">✓</span></a></li>
+        </ul>
+
+        <div class="wt-sidebar-test-card">
+          <h6>Unit Practice Exam</h6>
+          <p>Test your comprehensive understanding across all 10 topics of Unit 1.</p>
+          <a href="#unit1-mixed" class="wt-btn wt-btn-sm wt-btn-accent" style="width: 100%; justify-content: center;">
+            View Practice Exam
+          </a>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="wt-doc-content">
+      <!-- Unit Banner -->
+      <section class="wt-unit-overview-banner">
+        <span class="wt-unit-tag">Course CS35302 • Semester 5</span>
+        <h1 class="wt-unit-heading">Unit 1: Internet &amp; Web Foundations</h1>
+        <p class="wt-unit-lead">
+          Explore the architectural bedrock of modern networked communication. This unit covers the technological origins of the Internet from ARPANET to modern fiber backbones, the emergence of the World Wide Web and HTML, core application layer protocols (HTTP, SMTP, POP3, MIME, IMAP), domain name resolution via DNS, browser rendering internals, and web server architectures.
+        </p>
+        <div class="wt-unit-meta-bar">
+          <div><strong>Syllabus Code:</strong> CS35302 Unit 1</div>
+          <div><strong>Topics:</strong> 10 Detailed Sections</div>
+          <div><strong>Topic Tests:</strong> 10 Separate Tests (20 MCQs each)</div>
+          <div><strong>Mixed Exam:</strong> 20 Questions</div>
+        </div>
+      </section>
+
+      <!-- Topic 1 -->
+      <section id="history-internet" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 1.1 • Syllabus Section</span>
+            <h2 class="wt-topic-title">History of the Internet</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="history-internet">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="1" data-test-key="history-internet" data-test-title="History of the Internet">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            The Internet is a globally connected system of computer networks that communicates via the standard <strong>Internet Protocol Suite (TCP/IP)</strong>. Understanding its evolution is fundamental to mastering web technologies, distributed systems, and network protocol engineering.
+          </p>
+
+          <h4>1. The Origins: ARPANET and Packet Switching</h4>
+          <p>
+            During the height of the Cold War in the late 1950s and 1960s, the United States Department of Defense sought a decentralized communications network capable of surviving partial node destruction. In 1958, President Dwight D. Eisenhower established the <strong>Advanced Research Projects Agency (ARPA)</strong>, later known as DARPA.
+          </p>
+          <p>
+            Traditional telecommunications relied on <strong>circuit switching</strong>, where a dedicated electrical circuit remained continuously open between two endpoints for the duration of a call (such as the Public Switched Telephone Network - PSTN). If an intermediate line severed, the communication session failed immediately.
+          </p>
+          <p>
+            Between 1961 and 1964, theoretical breakthroughs by <strong>Leonard Kleinrock</strong> (queuing theory at MIT), <strong>Paul Baran</strong> (RAND Corporation), and <strong>Donald Davies</strong> (National Physical Laboratory, UK) created the alternative model: <strong>packet switching</strong>. In packet switching:
+          </p>
+          <ul>
+            <li>Data streams are discretized into small, standardized chunks called <strong>packets</strong>.</li>
+            <li>Each packet contains header metadata (source address, destination address, sequence numbers) and payload data.</li>
+            <li>Packets traverse independent routing paths across dynamic intermediate switches and are reassembled at the destination node.</li>
+          </ul>
+
+          <div class="wt-callout wt-callout-note">
+            <div class="wt-callout-icon">💡</div>
+            <div class="wt-callout-body">
+              <strong>Historical Milestone: The First ARPANET Transmission</strong>
+              On October 29, 1969, Charley Kline at UCLA attempted to transmit the word <code>LOGIN</code> to Bill Duvall at Stanford Research Institute (SRI) using an Interface Message Processor (IMP) built by Bolt Beranek and Newman (BBN). The system crashed after typing the letters <code>L</code> and <code>O</code>, making "LO" the first message ever transmitted across the precursor to the Internet!
+            </div>
+          </div>
+
+          <h4>2. The Introduction of TCP/IP and "Flag Day" (1983)</h4>
+          <p>
+            ARPANET initially utilized the <strong>Network Control Program (NCP)</strong> protocol. However, NCP was strictly designed for homogeneous networks and lacked the capacity to interlink dissimilar networks (such as packet radio and satellite links).
+          </p>
+          <p>
+            In 1974, computer scientists <strong>Vinton Cerf</strong> and <strong>Robert Kahn</strong> published the seminal paper <em>"A Protocol for Packet Network Intercommunication"</em>, introducing the <strong>Transmission Control Protocol (TCP)</strong>. Later, the protocol was split into two discrete layers:
+          </p>
+          <ul>
+            <li><strong>IP (Internet Protocol):</strong> Connectionless addressing and packet routing across heterogeneous physical networks.</li>
+            <li><strong>TCP (Transmission Control Protocol):</strong> Reliable, ordered, connection-oriented byte stream transmission with flow control, congestion avoidance, and packet retransmission.</li>
+          </ul>
+          <p>
+            On <strong>January 1, 1983</strong>, known as <strong>"Flag Day"</strong>, ARPANET permanently deactivated NCP and mandated TCP/IP across all connected hosts. This historic cutover marks the official birth of the modern Internet.
+          </p>
+
+          <h4>3. NSFNET and the Transition to Commercialization</h4>
+          <p>
+            In 1986, the U.S. National Science Foundation established <strong>NSFNET</strong>, connecting five national supercomputer centers with a 56 kbps backbone, rapidly upgraded to 1.544 Mbps (T1) and 45 Mbps (T3). NSFNET enforced an <em>Acceptable Use Policy (AUP)</em> prohibiting commercial traffic until the early 1990s.
+          </p>
+          <p>
+            On <strong>April 30, 1995</strong>, the NSF decommissioned the NSFNET backbone, completing the transfer of Internet management to private commercial Internet Service Providers (ISPs) interconnected via Network Access Points (NAPs) and Internet Exchange Points (IXPs).
+          </p>
+
+          <h4>4. Internet Governance and Standards Organizations</h4>
+          <div class="wt-table-wrap">
+            <table class="wt-table">
+              <thead>
+                <tr>
+                  <th>Organization</th>
+                  <th>Acronym</th>
+                  <th>Primary Function &amp; Responsibility</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Internet Engineering Task Force</strong></td>
+                  <td>IETF</td>
+                  <td>Open international community of network designers and researchers; authors <strong>RFCs (Request for Comments)</strong> defining core protocols (TCP, IP, HTTP, DNS).</td>
+                </tr>
+                <tr>
+                  <td><strong>Internet Assigned Numbers Authority</strong></td>
+                  <td>IANA</td>
+                  <td>Oversees global IP address space allocation, Autonomous System Numbers (ASNs), and protocol parameter registries. Managed under ICANN.</td>
+                </tr>
+                <tr>
+                  <td><strong>Internet Corporation for Assigned Names &amp; Numbers</strong></td>
+                  <td>ICANN</td>
+                  <td>Non-profit organization established in 1998 that coordinates the maintenance and procedures of several databases related to the namespaces and numerical spaces of the Internet.</td>
+                </tr>
+                <tr>
+                  <td><strong>World Wide Web Consortium</strong></td>
+                  <td>W3C</td>
+                  <td>Founded in 1994 by Tim Berners-Lee to develop open technical standards and guidelines for the Web (HTML, CSS, XML, Semantic Web).</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 2 -->
+      <section id="www-html" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 1.2 • Syllabus Section</span>
+            <h2 class="wt-topic-title">World Wide Web and HTML</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="www-html">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="1" data-test-key="www-html" data-test-title="World Wide Web and HTML">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            While the terms <em>Internet</em> and <em>World Wide Web</em> are colloquially used interchangeably, they represent distinct architectural concepts. The <strong>Internet</strong> is the physical and networking infrastructure of interconnected computers. The <strong>World Wide Web (WWW)</strong> is an information space of interlinked documents and resources accessible over the Internet via the Hypertext Transfer Protocol (HTTP).
+          </p>
+
+          <h4>1. Tim Berners-Lee and the Invention of the Web (1989)</h4>
+          <p>
+            In March 1989, British physicist and software engineer <strong>Tim Berners-Lee</strong> submitted a proposal titled <em>"Information Management: A Proposal"</em> while working at the European Organization for Nuclear Research (<strong>CERN</strong>) in Geneva, Switzerland. CERN employed thousands of international scientists whose research findings were stranded across incompatible hardware platforms and operating systems.
+          </p>
+          <p>
+            Berners-Lee synthesized three foundational technologies to establish the World Wide Web:
+          </p>
+          <ol>
+            <li><strong>URI / URL (Uniform Resource Identifier):</strong> A universal addressing scheme to uniquely locate any resource on the network.</li>
+            <li><strong>HTTP (Hypertext Transfer Protocol):</strong> A simple client-server application protocol for transmitting hypertext documents over TCP.</li>
+            <li><strong>HTML (HyperText Markup Language):</strong> A structured document format derived from SGML (Standard Generalized Markup Language) allowing embedded hyperlinks to other documents.</li>
+          </ol>
+
+          <h4>2. The Evolution of HTML Standards</h4>
+          <ul>
+            <li><strong>HTML 1.0 (1991):</strong> Initial specification containing just 18 tags (including <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>, and <code>&lt;a&gt;</code>). It had no support for tables, inline images, or style sheets.</li>
+            <li><strong>HTML 2.0 (1995 - RFC 1866):</strong> The first standardized HTML specification drafted by the IETF, formally introducing form elements (text inputs, checkboxes, submit buttons).</li>
+            <li><strong>HTML 3.2 (1997):</strong> Published by the W3C, introducing standard tables, applets, and text flow around images.</li>
+            <li><strong>HTML 4.01 (1999):</strong> Solidified support for style sheets (CSS), scripts (JavaScript), and frames, splitting specifications into Strict, Transitional, and Frameset.</li>
+            <li><strong>XHTML 1.0 (2000):</strong> Reformulated HTML 4.01 as an XML application, demanding strict well-formedness (mandatory closing tags, lowercase element names, quoted attributes). Browser adoption struggled due to strict XML parsing errors.</li>
+            <li><strong>HTML5 (2014 - Present):</strong> Formulated by the <strong>WHATWG</strong> (Web Hypertext Application Technology Working Group) and published by the W3C. HTML5 eliminated draconian XML parsing in favor of backwards-compatible, resilient parsing, native multimedia (<code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code>, <code>&lt;canvas&gt;</code>), and semantic landmark elements.</li>
+          </ul>
+
+          <div class="wt-code-card">
+            <div class="wt-code-header">
+              <span>Standard HTML5 Semantic Document Structure</span>
+              <span>HTML5</span>
+            </div>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+  &lt;title&gt;CS35302 – Web Technology&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;nav&gt;
+      &lt;a href="/"&gt;Home&lt;/a&gt;
+      &lt;a href="/unit1"&gt;Unit 1&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+  &lt;main&gt;
+    &lt;article&gt;
+      &lt;h1&gt;Understanding the World Wide Web&lt;/h1&gt;
+      &lt;p&gt;Hypertext links interconnected documents across global nodes.&lt;/p&gt;
+    &lt;/article&gt;
+    &lt;aside&gt;
+      &lt;h4&gt;Quick Reference&lt;/h4&gt;
+      &lt;p&gt;Invented at CERN in 1989.&lt;/p&gt;
+    &lt;/aside&gt;
+  &lt;/main&gt;
+  &lt;footer&gt;
+    &lt;p&gt;&amp;copy; Quantum University WebTech.&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 3 -->
+      <section id="http" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 1.3 • Syllabus Section</span>
+            <h2 class="wt-topic-title">Protocols – HTTP</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="http">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="1" data-test-key="http" data-test-title="Protocols – HTTP">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            The <strong>Hypertext Transfer Protocol (HTTP)</strong> is an application-layer, stateless, request-response protocol running over reliable transport protocols (primarily TCP, and UDP in HTTP/3). It defines how web browsers request resources from web servers and how servers deliver HTML, JSON, images, and other media back to clients.
+          </p>
+
+          <h4>1. Architectural Characteristics of HTTP</h4>
+          <ul>
+            <li><strong>Client-Server Architecture:</strong> The client (user agent) initiates requests; the server processes the request and responds with a status and resource payload.</li>
+            <li><strong>Stateless Nature:</strong> The server retains no session state between successive requests from the same client. Statefulness is achieved using client-side cookies (<code>Cookie</code> / <code>Set-Cookie</code> headers) or authorization tokens.</li>
+            <li><strong>Extensible:</strong> HTTP headers allow seamless evolution of authentication, caching, compression, and content negotiation without altering core transport logic.</li>
+          </ul>
+
+          <h4>2. HTTP Request Methods (Verbs)</h4>
+          <div class="wt-table-wrap">
+            <table class="wt-table">
+              <thead>
+                <tr>
+                  <th>Method</th>
+                  <th>Safe?</th>
+                  <th>Idempotent?</th>
+                  <th>Description &amp; Primary Usage</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>GET</code></td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                  <td>Requests a representation of the specified resource. Must not mutate server state.</td>
+                </tr>
+                <tr>
+                  <td><code>POST</code></td>
+                  <td>No</td>
+                  <td>No</td>
+                  <td>Submits an entity to the specified resource, often causing a change in state or side effects on the server (e.g., creating a record).</td>
+                </tr>
+                <tr>
+                  <td><code>PUT</code></td>
+                  <td>No</td>
+                  <td>Yes</td>
+                  <td>Replaces all current representations of the target resource with the uploaded request payload.</td>
+                </tr>
+                <tr>
+                  <td><code>DELETE</code></td>
+                  <td>No</td>
+                  <td>Yes</td>
+                  <td>Deletes the specified resource identified by the Request-URI.</td>
+                </tr>
+                <tr>
+                  <td><code>PATCH</code></td>
+                  <td>No</td>
+                  <td>No</td>
+                  <td>Applies partial modifications to a resource rather than replacing it entirely.</td>
+                </tr>
+                <tr>
+                  <td><code>HEAD</code></td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                  <td>Identical to <code>GET</code>, but the server must NOT return a message-body in the response (useful for checking headers or content length).</td>
+                </tr>
+                <tr>
+                  <td><code>OPTIONS</code></td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                  <td>Describes the communication options (methods permitted) for the target resource; heavily utilized in CORS preflight checks.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>3. HTTP Status Code Categories</h4>
+          <ul>
+            <li><strong>1xx (Informational):</strong> Request received, continuing process (e.g., <code>101 Switching Protocols</code>).</li>
+            <li><strong>2xx (Success):</strong> Action successfully received, understood, and accepted (e.g., <code>200 OK</code>, <code>201 Created</code>, <code>204 No Content</code>).</li>
+            <li><strong>3xx (Redirection):</strong> Further action needed to fulfill request (e.g., <code>301 Moved Permanently</code>, <code>302 Found</code>, <code>304 Not Modified</code> for caching).</li>
+            <li><strong>4xx (Client Error):</strong> Request contains bad syntax or cannot be fulfilled (e.g., <code>400 Bad Request</code>, <code>401 Unauthorized</code>, <code>403 Forbidden</code>, <code>404 Not Found</code>, <code>405 Method Not Allowed</code>, <code>429 Too Many Requests</code>).</li>
+            <li><strong>5xx (Server Error):</strong> Server failed to fulfill an apparently valid request (e.g., <code>500 Internal Server Error</code>, <code>502 Bad Gateway</code>, <code>503 Service Unavailable</code>, <code>504 Gateway Timeout</code>).</li>
+          </ul>
+
+          <h4>4. Evolution: HTTP/1.1 vs HTTP/2 vs HTTP/3</h4>
+          <div class="wt-table-wrap">
+            <table class="wt-table">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>HTTP/1.1 (1999)</th>
+                  <th>HTTP/2 (2015)</th>
+                  <th>HTTP/3 (2022)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Transport Protocol</strong></td>
+                  <td>TCP (port 80 / 443)</td>
+                  <td>TCP (TLS mandatory in practice)</td>
+                  <td><strong>QUIC over UDP</strong> (port 443)</td>
+                </tr>
+                <tr>
+                  <td><strong>Framing Format</strong></td>
+                  <td>Plain text (ASCII lines)</td>
+                  <td>Binary framing layer</td>
+                  <td>Binary framing layer</td>
+                </tr>
+                <tr>
+                  <td><strong>Multiplexing</strong></td>
+                  <td>No (sequential pipelining suffered Head-of-Line blocking)</td>
+                  <td>Yes (multiple streams over single TCP connection)</td>
+                  <td>Yes (independent streams eliminating TCP HoL blocking)</td>
+                </tr>
+                <tr>
+                  <td><strong>Header Compression</strong></td>
+                  <td>None (repeated headers wasted bandwidth)</td>
+                  <td>HPACK (static/dynamic tables)</td>
+                  <td>QPACK (out-of-order decompression)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 4 -->
+      <section id="smtp" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 1.4 • Syllabus Section</span>
+            <h2 class="wt-topic-title">Protocols – SMTP</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="smtp">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="1" data-test-key="smtp" data-test-title="Protocols – SMTP">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            The <strong>Simple Mail Transfer Protocol (SMTP)</strong> is the standard push protocol for transmitting electronic mail across the Internet. First specified in 1982 by Jonathan Postel in <strong>RFC 821</strong> (and revised in <strong>RFC 5321</strong>), SMTP governs how a Mail User Agent (MUA) submits messages to a Mail Transfer Agent (MTA), and how MTAs relay messages across networks to the destination server.
+          </p>
+
+          <h4>1. SMTP Architecture and Common Ports</h4>
+          <ul>
+            <li><strong>Port 25 (Standard Relay):</strong> Used exclusively for MTA-to-MTA server relay across the public Internet. Most residential ISPs block outbound Port 25 to prevent malware spam.</li>
+            <li><strong>Port 587 (Message Submission):</strong> The modern standard port for client-to-server email submission (MUA to MTA), mandating user authentication and TLS encryption (STARTTLS).</li>
+            <li><strong>Port 465 (SMTPS):</strong> Originally registered for SMTPS (SMTP wrapped in SSL/TLS immediately upon socket connection); standardized by RFC 8314 for secure submission.</li>
+          </ul>
+
+          <h4>2. Step-by-Step SMTP Command-Response Conversation</h4>
+          <p>
+            SMTP is an interactive, text-based protocol using three-digit numeric response codes (e.g., <code>250 OK</code>, <code>354 Start Mail Input</code>, <code>550 Mailbox Unavailable</code>).
+          </p>
+
+          <div class="wt-code-card">
+            <div class="wt-code-header">
+              <span>Interactive SMTP Session Protocol Trace</span>
+              <span>SMTP Transcript</span>
+            </div>
+            <pre><code>S: 220 mail.quantumuniversity.edu ESMTP Postfix
+C: EHLO client.example.com
+S: 250-mail.quantumuniversity.edu
+S: 250-PIPELINING
+S: 250-SIZE 20480000
+S: 250-STARTTLS
+S: 250 8BITMIME
+C: MAIL FROM:&lt;student@example.com&gt;
+S: 250 2.1.0 Ok
+C: RCPT TO:&lt;professor@quantumuniversity.edu&gt;
+S: 250 2.1.5 Ok
+C: DATA
+S: 354 End data with &lt;CR&gt;&lt;LF&gt;.&lt;CR&gt;&lt;LF&gt;
+C: From: student@example.com
+C: To: professor@quantumuniversity.edu
+C: Subject: Web Technology Unit 1 Inquiry
+C: 
+C: Respected Professor,
+C: Please find my notes on SMTP and packet switching.
+C: .
+S: 250 2.0.0 Ok: queued as 4ABC1234F
+C: QUIT
+S: 221 2.0.0 Bye</code></pre>
+          </div>
+
+          <div class="wt-callout wt-callout-important">
+            <div class="wt-callout-icon">⚠️</div>
+            <div class="wt-callout-body">
+              <strong>Crucial Protocol Detail: The End-of-Data Sequence</strong>
+              In an SMTP <code>DATA</code> command block, the client indicates the end of the message content by transmitting a carriage return, line feed, a single period on its own line, followed by a carriage return and line feed (<code>&lt;CR&gt;&lt;LF&gt;.&lt;CR&gt;&lt;LF&gt;</code>).
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 5 -->
+      <section id="pop3" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 1.5 • Syllabus Section</span>
+            <h2 class="wt-topic-title">Protocols – POP3</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="pop3">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="1" data-test-key="pop3" data-test-title="Protocols – POP3">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            The <strong>Post Office Protocol Version 3 (POP3)</strong>, specified in <strong>RFC 1939</strong>, is an application-layer pull protocol used by local email clients to retrieve messages from a remote mail server over a TCP connection.
+          </p>
+
+          <h4>1. Philosophy and Design Paradigm</h4>
+          <p>
+            POP3 was architected during an era when personal computers had intermittent dial-up Internet connections and mail servers possessed constrained disk storage. The operational paradigm is <strong>"Download and Delete"</strong>:
+          </p>
+          <ul>
+            <li>The client connects to the server mailbox.</li>
+            <li>Downloads all new messages to local client storage.</li>
+            <li>Marks messages as deleted on the server.</li>
+            <li>Disconnects and allows the user to read emails completely offline.</li>
+          </ul>
+
+          <h4>2. The Three Operational States of POP3</h4>
+          <ol>
+            <li><strong>Authorization State:</strong> The client identifies itself and proves its credentials using commands like <code>USER &lt;username&gt;</code> and <code>PASS &lt;password&gt;</code>, or SASL authentication.</li>
+            <li><strong>Transaction State:</strong> The client queries mailbox statistics and downloads messages. Key commands include:
+              <ul>
+                <li><code>STAT</code>: Returns number of messages and total octet size.</li>
+                <li><code>LIST [msg#]</code>: Lists message IDs and sizes.</li>
+                <li><code>RETR &lt;msg#&gt;</code>: Retrieves the full content of a specific message.</li>
+                <li><code>DELE &lt;msg#&gt;</code>: Marks a message for deletion.</li>
+                <li><code>NOOP</code>: Keeps connection alive.</li>
+                <li><code>RSET</code>: Unmarks any messages marked for deletion in the current session.</li>
+              </ul>
+            </li>
+            <li><strong>Update State:</strong> Initiated when the client issues the <code>QUIT</code> command. The POP3 server permanently removes all messages marked with <code>DELE</code> from disk and terminates the TCP socket.</li>
+          </ol>
+
+          <div class="wt-callout wt-callout-warning">
+            <div class="wt-callout-icon">🚨</div>
+            <div class="wt-callout-body">
+              <strong>Common Trap: When Are Messages Deleted?</strong>
+              Messages marked with <code>DELE</code> are NOT deleted immediately during the Transaction State. If the network connection drops or the client terminates abnormally before sending <code>QUIT</code>, the server does NOT enter the Update State, and zero messages are deleted!
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 6 -->
+      <section id="mime" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 1.6 • Syllabus Section</span>
+            <h2 class="wt-topic-title">Protocols – MIME</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="mime">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="1" data-test-key="mime" data-test-title="Protocols – MIME">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            The original SMTP specification (RFC 821) strictly restricted message content to <strong>7-bit US-ASCII</strong> text lines of no more than 1,000 characters. As internationalization and multimedia expanded, this created major barriers: binary attachments (images, PDFs, audio) and non-English scripts (Unicode, Cyrillic, Kanji) were corrupted.
+          </p>
+          <p>
+            In 1992, <strong>Nathaniel Borenstein</strong> and Ned Freed authored <strong>MIME (Multipurpose Internet Mail Extensions)</strong> across RFCs 2045-2049, expanding email and web capabilities.
+          </p>
+
+          <h4>1. Standard MIME Header Fields</h4>
+          <ul>
+            <li><code>MIME-Version: 1.0</code>: Declares the message complies with MIME RFC standards.</li>
+            <li><code>Content-Type: [type]/[subtype]; parameters</code>: Specifies the nature of data (e.g., <code>text/html</code>, <code>application/pdf</code>, <code>image/png</code>).</li>
+            <li><code>Content-Transfer-Encoding</code>: Declares how binary data was transformed into 7-bit ASCII (e.g., <code>base64</code>, <code>quoted-printable</code>).</li>
+            <li><code>Content-Disposition</code>: Directs the client whether to display the resource inline or prompt as a downloadable attachment (e.g., <code>attachment; filename="notes.pdf"</code>).</li>
+          </ul>
+
+          <h4>2. Encoding Mechanisms: Quoted-Printable vs Base64</h4>
+          <ul>
+            <li><strong>Quoted-Printable:</strong> Ideal for text that is mostly ASCII with a few accented characters. Standard characters remain unchanged; non-ASCII bytes are represented by an equals sign followed by two hexadecimal digits (e.g., <code>=3D</code> for <code>=</code>).</li>
+            <li><strong>Base64:</strong> Designed for arbitrary binary files (images, executables). It converts every 3 binary bytes (24 bits) into 4 printable ASCII characters (each carrying 6 bits) chosen from a 64-character table (A-Z, a-z, 0-9, +, /). It adds approximately <strong>33% bandwidth overhead</strong>. Padding character <code>=</code> is appended if the input stream length is not a multiple of 3.</li>
+          </ul>
+
+          <h4>3. Multipart Media Types</h4>
+          <p>
+            MIME enables compound messages containing multiple representations or file attachments through multipart headers:
+          </p>
+          <ul>
+            <li><strong>multipart/mixed:</strong> Used when parts are independent and intended to be viewed sequentially (e.g., a body paragraph followed by two attached PDF documents).</li>
+            <li><strong>multipart/alternative:</strong> Used when parts are alternative representations of the exact same content (e.g., both a plain-text version and a rich HTML version of an email). The client renders the richest version it supports.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Topic 7 -->
+      <section id="imap" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 1.7 • Syllabus Section</span>
+            <h2 class="wt-topic-title">Protocols – IMAP</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="imap">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="1" data-test-key="imap" data-test-title="Protocols – IMAP">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            The <strong>Internet Message Access Protocol (IMAP)</strong>, currently in version 4 revision 1 (<strong>IMAP4rev1 - RFC 3501</strong>), was invented in 1986 by <strong>Mark Crispin</strong> at Stanford University. Unlike POP3's "download and delete" philosophy, IMAP is built for seamless <strong>two-way multi-client synchronization</strong>.
+          </p>
+
+          <h4>1. Architectural Advantages of IMAP over POP3</h4>
+          <ul>
+            <li><strong>Centralized Server-Side Storage:</strong> Emails remain stored on the remote mail server. A user can read an email on a smartphone, mark it as read, and see that status instantly updated on their laptop.</li>
+            <li><strong>Hierarchical Folders:</strong> Users can create, rename, and organize server-side mailbox folders (e.g., Inbox, Work, Personal, Archive).</li>
+            <li><strong>Partial Message Fetching:</strong> IMAP clients can download just the message envelope headers (Sender, Date, Subject) without downloading heavy 20MB attachments until explicitly requested.</li>
+            <li><strong>Server-Side Search:</strong> Clients can request the server to execute searches across gigabytes of email archives without downloading the emails locally.</li>
+            <li><strong>State Flags:</strong> Maintains persistent flags per message: <code>\Seen</code>, <code>\Answered</code>, <code>\Flagged</code>, <code>\Deleted</code>, and <code>\Draft</code>.</li>
+            <li><strong>Real-Time Push Notifications:</strong> The <code>IMAP IDLE</code> extension (RFC 2177) allows the server to push new incoming email events to the client without wasteful polling.</li>
+          </ul>
+
+          <h4>2. POP3 vs IMAP Comparative Matrix</h4>
+          <div class="wt-table-wrap">
+            <table class="wt-table">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>POP3 (Post Office Protocol)</th>
+                  <th>IMAP (Internet Message Access Protocol)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Default Ports</strong></td>
+                  <td>Port 110 (cleartext), Port 995 (POP3S TLS)</td>
+                  <td>Port 143 (cleartext / STARTTLS), Port 993 (IMAPS TLS)</td>
+                </tr>
+                <tr>
+                  <td><strong>Storage Location</strong></td>
+                  <td>Local device (deleted from server)</td>
+                  <td>Server-side centralized primary storage</td>
+                </tr>
+                <tr>
+                  <td><strong>Multi-Device Sync</strong></td>
+                  <td>Poor (causes desynchronization &amp; duplicates)</td>
+                  <td>Native bidirectional synchronization across all devices</td>
+                </tr>
+                <tr>
+                  <td><strong>Partial Fetching</strong></td>
+                  <td>No (must download entire RFC 822 body)</td>
+                  <td>Yes (can fetch headers, text parts, or attachments separately)</td>
+                </tr>
+                <tr>
+                  <td><strong>Folder Management</strong></td>
+                  <td>Single mailbox (INBOX only)</td>
+                  <td>Full server-side folder hierarchies and nested mailboxes</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 8 -->
+      <section id="dns" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 1.8 • Syllabus Section</span>
+            <h2 class="wt-topic-title">Domain Name Server (DNS)</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="dns">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="1" data-test-key="dns" data-test-title="Domain Name Server (DNS)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            The <strong>Domain Name System (DNS)</strong> is a distributed, hierarchical database system invented by <strong>Paul Mockapetris</strong> in 1983 (RFCs 882 &amp; 883). It translates human-friendly Fully Qualified Domain Names (FQDNs, such as <code>www.quantumuniversity.edu</code>) into machine-routable IP addresses (such as <code>104.21.64.12</code> or IPv6 <code>2606:4700::6815:400c</code>).
+          </p>
+
+          <h4>1. The DNS Hierarchy Structure</h4>
+          <ul>
+            <li><strong>Root Domain (<code>.</code>):</strong> The top of the tree, denoted by an implicit trailing dot. Coordinated by 13 named root authority server clusters worldwide (A.ROOT-SERVERS.NET through M.ROOT-SERVERS.NET), replicated via Anycast routing across thousands of global servers.</li>
+            <li><strong>Top-Level Domains (TLD):</strong> Directly beneath root; categorized into generic TLDs (<code>.com</code>, <code>.org</code>, <code>.edu</code>) and country-code TLDs (<code>.in</code>, <code>.uk</code>, <code>.de</code>). Managed by designated registries.</li>
+            <li><strong>Second-Level Domains:</strong> The domain registered by organizations or individuals (e.g., <code>quantumuniversity</code> in <code>quantumuniversity.edu</code>).</li>
+            <li><strong>Subdomains:</strong> Organizational partitions created by the domain owner (e.g., <code>mail.quantumuniversity.edu</code>, <code>cs.quantumuniversity.edu</code>).</li>
+          </ul>
+
+          <h4>2. DNS Query Resolution: Recursive vs Iterative</h4>
+          <p>
+            When a client enters a URL, the local resolver initiates resolution:
+          </p>
+          <ol>
+            <li><strong>Recursive Query:</strong> The client asks its Local Recursive Resolver (provided by ISP or public DNS like <code>8.8.8.8</code> or <code>1.1.1.1</code>): <em>"Find me the IP for this domain, and do not return until you have the final answer."</em></li>
+            <li><strong>Iterative Queries:</strong> The Recursive Resolver queries other name servers step-by-step:
+              <ul>
+                <li>Queries a <strong>Root Server</strong>, which responds with a referral to the <code>.edu</code> TLD Name Servers.</li>
+                <li>Queries the <strong>TLD Server</strong>, which responds with a referral to the <strong>Authoritative Name Server</strong> for <code>quantumuniversity.edu</code>.</li>
+                <li>Queries the <strong>Authoritative Server</strong>, which responds with the final <code>A</code> or <code>AAAA</code> resource record.</li>
+              </ul>
+            </li>
+          </ol>
+
+          <h4>3. Fundamental DNS Resource Record Types</h4>
+          <div class="wt-table-wrap">
+            <table class="wt-table">
+              <thead>
+                <tr>
+                  <th>Record Type</th>
+                  <th>Value Type</th>
+                  <th>Description &amp; Use Case</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>A</code></td>
+                  <td>32-bit IPv4 address</td>
+                  <td>Maps a hostname to an IPv4 address (e.g., <code>192.0.2.1</code>).</td>
+                </tr>
+                <tr>
+                  <td><code>AAAA</code></td>
+                  <td>128-bit IPv6 address</td>
+                  <td>Maps a hostname to an IPv6 address (e.g., <code>2001:db8::1</code>).</td>
+                </tr>
+                <tr>
+                  <td><code>CNAME</code></td>
+                  <td>Canonical Domain Name</td>
+                  <td>Creates an alias pointing one domain name to another domain name (cannot coexist with other records for the same label).</td>
+                </tr>
+                <tr>
+                  <td><code>MX</code></td>
+                  <td>Preference + Mail Host</td>
+                  <td>Specifies mail transfer agents responsible for accepting inbound email for the domain, with priority numbers (lower number = higher priority).</td>
+                </tr>
+                <tr>
+                  <td><code>NS</code></td>
+                  <td>Name Server FQDN</td>
+                  <td>Delegates a DNS zone to use given authoritative name servers.</td>
+                </tr>
+                <tr>
+                  <td><code>PTR</code></td>
+                  <td>Domain Name</td>
+                  <td>Pointer record used in reverse DNS lookups (maps IP address to hostname under <code>in-addr.arpa</code>).</td>
+                </tr>
+                <tr>
+                  <td><code>TXT</code></td>
+                  <td>Arbitrary text string</td>
+                  <td>Carries machine-readable data used for domain ownership validation, SPF anti-spoofing policies, and DKIM public keys.</td>
+                </tr>
+                <tr>
+                  <td><code>SOA</code></td>
+                  <td>Zone Parameters</td>
+                  <td>Start of Authority; contains primary master name server, administrator email, serial number, refresh, retry, and expire timers.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 9 -->
+      <section id="web-browsers" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 1.9 • Syllabus Section</span>
+            <h2 class="wt-topic-title">Web Browsers</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="web-browsers">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="1" data-test-key="web-browsers" data-test-title="Web Browsers">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            A <strong>Web Browser</strong> (user agent) is a client application software designed to retrieve, parse, render, and navigate resources across the World Wide Web. Modern browsers represent some of the most sophisticated distributed computing runtimes ever engineered.
+          </p>
+
+          <h4>1. High-Level Internal Browser Architecture</h4>
+          <ul>
+            <li><strong>User Interface (UI):</strong> Address bar, back/forward buttons, bookmarking menu, tabs, reload button.</li>
+            <li><strong>Browser Engine:</strong> Marshals actions between the UI and the rendering engine.</li>
+            <li><strong>Rendering Engine:</strong> Responsible for parsing HTML, CSS, and displaying formatted content. Examples:
+              <ul>
+                <li><strong>Blink:</strong> Developed by Google for Chromium, Chrome, Microsoft Edge, Opera, Brave. (Forked from WebKit).</li>
+                <li><strong>WebKit:</strong> Apple's open-source engine powering Safari and all iOS browsers.</li>
+                <li><strong>Gecko:</strong> Mozilla's engine powering Firefox.</li>
+              </ul>
+            </li>
+            <li><strong>Networking:</strong> Implements HTTP, HTTPS, WebSockets, DNS lookups, TLS encryption, and connection pooling.</li>
+            <li><strong>JavaScript Engine:</strong> Compiles and executes script code via Just-In-Time (JIT) compilation (e.g., <strong>V8</strong> in Chrome/Node.js, <strong>SpiderMonkey</strong> in Firefox, <strong>JavaScriptCore</strong> in Safari).</li>
+            <li><strong>UI Backend:</strong> Uses operating system primitive drawing calls to render basic widgets (combo boxes, input windows).</li>
+            <li><strong>Data Persistence:</strong> Manages cookies, localStorage, sessionStorage, IndexedDB, and WebSQL.</li>
+          </ul>
+
+          <h4>2. The Critical Rendering Path (CRP)</h4>
+          <ol>
+            <li><strong>DOM Construction:</strong> The HTML bytes are converted into characters &rarr; tokens &rarr; nodes &rarr; <strong>Document Object Model (DOM)</strong> tree.</li>
+            <li><strong>CSSOM Construction:</strong> CSS stylesheets and style blocks are converted into the <strong>CSS Object Model (CSSOM)</strong> tree.</li>
+            <li><strong>Render Tree:</strong> The browser combines DOM and CSSOM to build the Render Tree. Elements with <code>display: none</code> or <code>&lt;head&gt;</code> tags are omitted because they produce zero visual output.</li>
+            <li><strong>Layout (Reflow):</strong> The browser computes exact geometric coordinates and pixel dimensions for every visible node on the viewport.</li>
+            <li><strong>Paint (Repaint):</strong> The browser converts the layout tree into actual colored pixels on display layers (rasterization).</li>
+            <li><strong>Compositing:</strong> Independent GPU drawing layers are assembled onto the physical screen buffer.</li>
+          </ol>
+
+          <div class="wt-callout wt-callout-tip">
+            <div class="wt-callout-icon">⚡</div>
+            <div class="wt-callout-body">
+              <strong>Performance Engineering: Reflow vs Repaint</strong>
+              Mutating geometric properties like <code>width</code>, <code>height</code>, <code>margin</code>, or <code>fontSize</code> triggers an expensive <strong>Reflow (Layout)</strong>, forcing the engine to recompute surrounding sibling elements. Mutating purely visual attributes like <code>color</code> or <code>background-color</code> only triggers a <strong>Repaint</strong>. For top 60 FPS animations, use <code>transform</code> and <code>opacity</code> which run on the GPU compositor without triggering reflow or repaint.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 10 -->
+      <section id="web-servers" class="wt-topic-section">
+        <div class="wt-topic-header-card">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num">Topic 1.10 • Syllabus Section</span>
+            <h2 class="wt-topic-title">Web Servers</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="web-servers">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="1" data-test-key="web-servers" data-test-title="Web Servers">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Take Topic Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            A <strong>Web Server</strong> refers both to the physical/virtual computer hardware connected to the network and the specialized daemon software program that accepts inbound HTTP/HTTPS requests from clients and delivers web resources (HTML documents, CSS, media, REST API JSON responses).
+          </p>
+
+          <h4>1. Process vs Event-Driven Server Architecture</h4>
+          <ul>
+            <li><strong>Process / Thread-Driven (e.g., Apache HTTP Server with MPM Prefork/Worker):</strong>
+              <ul>
+                <li>Each incoming client connection is assigned a dedicated operating system process or thread.</li>
+                <li>While straightforward to program, allocating thousands of threads causes significant memory consumption and CPU thrashing due to continuous OS context switching (the classic <strong>C10K problem</strong>).</li>
+              </ul>
+            </li>
+            <li><strong>Asynchronous Event-Driven (e.g., NGINX, Node.js):</strong>
+              <ul>
+                <li>Utilizes a non-blocking, single-threaded or worker-pool event loop relying on operating system I/O multiplexing primitives (such as Linux <code>epoll</code>, BSD <code>kqueue</code>).</li>
+                <li>A single worker process can concurrently sustain tens of thousands of idle connections with negligible memory overhead.</li>
+              </ul>
+            </li>
+          </ul>
+
+          <h4>2. Major Web Server Implementations</h4>
+          <div class="wt-table-wrap">
+            <table class="wt-table">
+              <thead>
+                <tr>
+                  <th>Web Server</th>
+                  <th>Origin &amp; Architecture</th>
+                  <th>Key Strengths &amp; Primary Role</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Apache HTTP Server</strong></td>
+                  <td>1995 (NCSA HTTPd successor); modular Multi-Processing Modules (MPM).</td>
+                  <td>Per-directory runtime configuration via <code>.htaccess</code>; rich ecosystem of dynamic modules (<code>mod_rewrite</code>, <code>mod_php</code>).</td>
+                </tr>
+                <tr>
+                  <td><strong>NGINX</strong></td>
+                  <td>Created in 2004 by Igor Sysoev; asynchronous event-driven.</td>
+                  <td>Exceptional high-concurrency throughput; industry standard for <strong>Reverse Proxying</strong>, SSL termination, and static file caching.</td>
+                </tr>
+                <tr>
+                  <td><strong>Microsoft IIS</strong></td>
+                  <td>Proprietary server tightly integrated into Microsoft Windows Server.</td>
+                  <td>Native hosting for ASP.NET / .NET Core, integrated Windows Active Directory authentication.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>3. Name-Based Virtual Hosting</h4>
+          <p>
+            In the early Internet, every distinct website required a dedicated physical machine and unique IP address. <strong>HTTP/1.1 introduced the mandatory <code>Host</code> request header</strong>, allowing a single web server on one IP address to host hundreds of distinct websites (Virtual Hosts):
+          </p>
+
+          <div class="wt-code-card">
+            <div class="wt-code-header">
+              <span>NGINX Virtual Host Block Example</span>
+              <span>nginx.conf</span>
+            </div>
+            <pre><code>server {
+    listen 80;
+    server_name portal.quantumuniversity.edu;
+
+    root /var/www/quantum_portal;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    location /api/ {
+        proxy_pass http://127.0.0.1:5000/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+}</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Unit 1 Mixed Practice Test Section -->
+      <section id="unit1-mixed" class="wt-topic-section">
+        <div class="wt-topic-header-card" style="border-left-color: #6366f1; background: linear-gradient(135deg, #ffffff 0%, #f5f3ff 100%);">
+          <div class="wt-topic-header-info">
+            <span class="wt-topic-num" style="color: #6366f1;">Comprehensive Review • Unit 1</span>
+            <h2 class="wt-topic-title">Unit 1 Mixed Practice Examination</h2>
+          </div>
+          <div class="wt-topic-actions-right">
+            <div class="wt-score-badge" data-badge-key="unit1-mixed">
+              <span class="badge-pending">Not Attempted</span>
+            </div>
+            <button class="wt-btn wt-btn-accent" data-unit="1" data-test-key="unit1-mixed" data-test-title="Unit 1 Comprehensive Practice Test" style="background: linear-gradient(135deg, #6366f1 0%, #7c3aed 100%);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+              <span>Start Unit Practice Test (20 MCQs)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="wt-content-block">
+          <p>
+            The <strong>Unit 1 Mixed Practice Examination</strong> evaluates your holistic mastery across all 10 syllabus topics in Unit 1. It samples 20 rigorous, exam-caliber multiple choice questions testing theoretical knowledge, protocol headers, port assignments, and practical architectural concepts.
+          </p>
+          <div class="wt-callout wt-callout-tip">
+            <div class="wt-callout-icon">🏆</div>
+            <div class="wt-callout-body">
+              <strong>Examination Tip:</strong>
+              We strongly recommend completing each individual topic test (1.1 through 1.10) first to reinforce specific concepts before attempting this comprehensive unit exam.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom Unit Navigation Pagination -->
+      <nav class="wt-unit-pagination">
+        <a href="index.html" class="wt-pagination-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <div class="wt-pagination-text">
+            <span class="wt-pagination-label">Previous</span>
+            <span class="wt-pagination-title">Course Homepage</span>
+          </div>
+        </a>
+
+        <a href="unit2.html" class="wt-pagination-btn wt-pagination-next">
+          <div class="wt-pagination-text" style="text-align: right;">
+            <span class="wt-pagination-label">Next Unit</span>
+            <span class="wt-pagination-title">Unit 2: Client-Side Technologies &amp; XML</span>
+          </div>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </nav>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="wt-footer">
+    <div class="wt-container">
+      <div class="wt-footer-grid">
+        <div class="wt-footer-brand">
+          <h4>WebTech Learning Portal</h4>
+          <p>
+            An educational documentation and examination platform created for <strong>Web Technology (Course Code: CS35302)</strong>, Bachelor of Technology in Computer Science &amp; Engineering, Semester 5, at <strong>Quantum School of Technology, Quantum University</strong>.
+          </p>
+        </div>
+
+        <div class="wt-footer-col">
+          <h5>Course Navigation</h5>
+          <ul class="wt-footer-links">
+            <li><a href="unit1.html">Unit 1: Internet &amp; Web Foundations</a></li>
+            <li><a href="unit2.html">Unit 2: Client-Side Technologies &amp; XML</a></li>
+            <li><a href="unit3.html">Unit 3: Web Services &amp; Ajax</a></li>
+            <li><a href="unit4.html">Unit 4: Interactive and Social Web</a></li>
+            <li><a href="unit5.html">Unit 5: Semantic Web &amp; Web Intelligence</a></li>
+          </ul>
+        </div>
+
+        <div class="wt-footer-col">
+          <h5>Examination Tools</h5>
+          <ul class="wt-footer-links">
+            <li><a href="#" data-action="open-search">Search Syllabus Topics</a></li>
+            <li><a href="unit1.html#unit1-mixed">Unit 1 Mixed Practice Test</a></li>
+            <li><a href="unit2.html#unit2-mixed">Unit 2 Mixed Practice Test</a></li>
+            <li><a href="unit3.html#unit3-mixed">Unit 3 Mixed Practice Test</a></li>
+            <li><a href="unit4.html#unit4-mixed">Unit 4 Mixed Practice Test</a></li>
+            <li><a href="unit5.html#unit5-mixed">Unit 5 Mixed Practice Test</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="wt-footer-bottom">
+        <div>&copy; WebTech Learning. Course CS35302 – Quantum University. All rights reserved.</div>
+        <div>Built with HTML5, CSS3, &amp; Vanilla JavaScript. Zero heavy frameworks.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data/search-index.js"></script>
+  <script src="data/unit1-questions.js"></script>
+  <script src="data/unit2-questions.js"></script>
+  <script src="data/unit3-questions.js"></script>
+  <script src="data/unit4-questions.js"></script>
+  <script src="data/unit5-questions.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/test-engine.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/navigation.js"></script>
+  <script>
+    // Update sidebar progress on load and after tests
+    function updateUnit1Sidebar() {
+      if (!window.WebTechStorage) return;
+      var stats = window.WebTechStorage.getUnitStats(1);
+      var fill = document.getElementById('wt-sidebar-unit1-fill');
+      var count = document.getElementById('wt-sidebar-unit1-count');
+      if (fill && count) {
+        fill.style.width = stats.percentage + '%';
+        count.textContent = stats.completedTopics + '/' + stats.totalTopics;
+      }
+      // Update checkmarks in TOC
+      var topics = [
+        'history-internet', 'www-html', 'http', 'smtp', 'pop3',
+        'mime', 'imap', 'dns', 'web-browsers', 'web-servers'
+      ];
+      topics.forEach(function(key) {
+        var el = document.querySelector('.wt-toc-check[data-toc-key="' + key + '"]');
+        if (el) {
+          if (window.WebTechStorage.isCompleted(key)) {
+            el.classList.add('completed');
+          } else {
+            el.classList.remove('completed');
+          }
+        }
+      });
+    }
+    document.addEventListener('DOMContentLoaded', updateUnit1Sidebar);
+    window.addEventListener('webtech:progress_updated', updateUnit1Sidebar);
+  </script>
+</body>
+</html>
